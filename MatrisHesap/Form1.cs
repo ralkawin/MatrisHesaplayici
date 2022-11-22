@@ -40,7 +40,7 @@ namespace MatrisHesap
                     if (A44.Visible == true && (A44.Text.Trim() == string.Empty || !decimal.TryParse(A44.Text, out number3))) { isThereEmptyA = true;}
                     if (isThereEmptyA == true)
                     {
-                        MessageBox.Show("Matrislerde hata var. Lütfen kontrol ediniz.");
+                        MessageBox.Show("Matrislerde hata var. Lütfen kontrol ediniz...");
                         return;
                     }
                 } while (isThereEmptyA == true);
@@ -87,7 +87,7 @@ namespace MatrisHesap
                     if (A44.Visible == true && (B44.Text.Trim() == string.Empty || !decimal.TryParse(B44.Text, out number3))) { isThereEmpty = true;}
                     if (isThereEmpty == true)
                     {
-                        MessageBox.Show("Matrislerde hata var. Lütfen kontrol ediniz.");
+                        MessageBox.Show("Matrislerde hata var. Lütfen kontrol ediniz...");
                         return;
                     }
                 } while (isThereEmpty == true);
