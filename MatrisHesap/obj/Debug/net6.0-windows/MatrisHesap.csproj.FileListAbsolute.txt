@@ -1,0 +1,17 @@
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\bin\Debug\net6.0-windows\MatrisHesap.exe
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\bin\Debug\net6.0-windows\MatrisHesap.deps.json
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\bin\Debug\net6.0-windows\MatrisHesap.runtimeconfig.json
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\bin\Debug\net6.0-windows\MatrisHesap.dll
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\bin\Debug\net6.0-windows\MatrisHesap.pdb
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.csproj.AssemblyReference.cache
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.Form1.resources
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.csproj.GenerateResource.cache
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.AssemblyInfoInputs.cache
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.AssemblyInfo.cs
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.csproj.CoreCompileInputs.cache
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.dll
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\refint\MatrisHesap.dll
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.pdb
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\MatrisHesap.genruntimeconfig.cache
+C:\Users\Osman\source\repos\MatrisHesap\MatrisHesap\obj\Debug\net6.0-windows\ref\MatrisHesap.dll
