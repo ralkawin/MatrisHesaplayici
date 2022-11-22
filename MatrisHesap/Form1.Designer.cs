@@ -302,6 +302,7 @@
             this.setAbirim.TabIndex = 19;
             this.setAbirim.Text = "Birim Matris";
             this.setAbirim.UseVisualStyleBackColor = true;
+            this.setAbirim.Click += new System.EventHandler(this.setAbirim_Click);
             // 
             // cleanerA
             // 
@@ -311,6 +312,7 @@
             this.cleanerA.TabIndex = 20;
             this.cleanerA.Text = "Temizle";
             this.cleanerA.UseVisualStyleBackColor = true;
+            this.cleanerA.Click += new System.EventHandler(this.cleanerA_Click);
             // 
             // cleanerB
             // 
@@ -320,6 +322,7 @@
             this.cleanerB.TabIndex = 41;
             this.cleanerB.Text = "Temizle";
             this.cleanerB.UseVisualStyleBackColor = true;
+            this.cleanerB.Click += new System.EventHandler(this.cleanerB_Click);
             // 
             // setBbirim
             // 
@@ -329,6 +332,7 @@
             this.setBbirim.TabIndex = 40;
             this.setBbirim.Text = "Birim Matris";
             this.setBbirim.UseVisualStyleBackColor = true;
+            this.setBbirim.Click += new System.EventHandler(this.setBbirim_Click);
             // 
             // setB
             // 
@@ -904,7 +908,6 @@
 
         public TrackBar rowA;
         public TrackBar colA;
-        private StatusStrip statusStrip1;
         private TextBox A11;
         private TextBox A12;
         private TextBox A13;
