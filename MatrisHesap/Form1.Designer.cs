@@ -95,7 +95,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.rowA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colB)).BeginInit();
@@ -810,21 +809,11 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "label5";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(135, 415);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(150, 104);
-            this.listBox1.TabIndex = 68;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 552);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(809, 400);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label3);
@@ -973,6 +962,5 @@
         private Label label4;
         private ComboBox comboBox3;
         private Label label5;
-        private ListBox listBox1;
     }
 }

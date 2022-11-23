@@ -68,100 +68,67 @@ namespace MatrisHesap
             if (matName == 0)
             {
                 matrixA = new int[rowA.Value, colA.Value];
-                bool isThereEmptyA=false;
-                decimal numberA = 0;
-                
 
                 do
                 {
-                    if (A11.Visible == true && (A11.Text.Trim() == string.Empty || !decimal.TryParse(A11.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A12.Visible == true && (A12.Text.Trim() == string.Empty || !decimal.TryParse(A12.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A13.Visible == true && (A13.Text.Trim() == string.Empty || !decimal.TryParse(A13.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A14.Visible == true && (A14.Text.Trim() == string.Empty || !decimal.TryParse(A14.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A21.Visible == true && (A21.Text.Trim() == string.Empty || !decimal.TryParse(A21.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A22.Visible == true && (A22.Text.Trim() == string.Empty || !decimal.TryParse(A22.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A23.Visible == true && (A23.Text.Trim() == string.Empty || !decimal.TryParse(A23.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A24.Visible == true && (A24.Text.Trim() == string.Empty || !decimal.TryParse(A24.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A32.Visible == true && (A32.Text.Trim() == string.Empty || !decimal.TryParse(A32.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A31.Visible == true && (A31.Text.Trim() == string.Empty || !decimal.TryParse(A31.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A33.Visible == true && (A33.Text.Trim() == string.Empty || !decimal.TryParse(A33.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A34.Visible == true && (A34.Text.Trim() == string.Empty || !decimal.TryParse(A34.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A41.Visible == true && (A41.Text.Trim() == string.Empty || !decimal.TryParse(A41.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A42.Visible == true && (A42.Text.Trim() == string.Empty || !decimal.TryParse(A42.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A43.Visible == true && (A43.Text.Trim() == string.Empty || !decimal.TryParse(A43.Text, out numberA))) { isThereEmptyA = true;}
-                    if (A44.Visible == true && (A44.Text.Trim() == string.Empty || !decimal.TryParse(A44.Text, out numberA))) { isThereEmptyA = true;}
-                    if (isThereEmptyA == true)
+                    if (isThereNumber(0) == true)
+                    {
+                        if (A11.Visible == true) { matrixA[0, 0] = int.Parse(A11.Text); }
+                        if (A12.Visible == true) { matrixA[0, 1] = int.Parse(A12.Text); }
+                        if (A13.Visible == true) { matrixA[0, 2] = int.Parse(A13.Text); }
+                        if (A14.Visible == true) { matrixA[0, 3] = int.Parse(A14.Text); }
+                        if (A21.Visible == true) { matrixA[1, 0] = int.Parse(A21.Text); }
+                        if (A22.Visible == true) { matrixA[1, 1] = int.Parse(A22.Text); }
+                        if (A23.Visible == true) { matrixA[1, 2] = int.Parse(A23.Text); }
+                        if (A24.Visible == true) { matrixA[1, 3] = int.Parse(A24.Text); }
+                        if (A32.Visible == true) { matrixA[2, 1] = int.Parse(A32.Text); }
+                        if (A31.Visible == true) { matrixA[2, 0] = int.Parse(A31.Text); }
+                        if (A33.Visible == true) { matrixA[2, 2] = int.Parse(A33.Text); }
+                        if (A34.Visible == true) { matrixA[2, 3] = int.Parse(A34.Text); }
+                        if (A41.Visible == true) { matrixA[3, 0] = int.Parse(A41.Text); }
+                        if (A42.Visible == true) { matrixA[3, 1] = int.Parse(A42.Text); }
+                        if (A43.Visible == true) { matrixA[3, 2] = int.Parse(A43.Text); }
+                        if (A44.Visible == true) { matrixA[3, 3] = int.Parse(A44.Text); }
+                    } 
+                    else 
                     {
                         MessageBox.Show("A matrisinde eksik veya hatalý deðerler var. Lütfen kontrol ediniz...");
                         return;
-                    } else { isThereEmptyA = false; }
-                } while (isThereEmptyA == true);
-
-                if (A11.Visible == true && ((A11.Text.Trim() != string.Empty) && (decimal.TryParse(A11.Text, out numberA)))){matrixA[0, 0] = int.Parse(A11.Text);}
-                if (A12.Visible == true && ((A12.Text.Trim() != string.Empty) && (decimal.TryParse(A12.Text, out numberA)))){matrixA[0, 1] = int.Parse(A12.Text);}
-                if (A13.Visible == true && ((A13.Text.Trim() != string.Empty) && (decimal.TryParse(A13.Text, out numberA)))){matrixA[0, 2] = int.Parse(A13.Text);}
-                if (A14.Visible == true && ((A14.Text.Trim() != string.Empty) && (decimal.TryParse(A14.Text, out numberA)))){matrixA[0, 3] = int.Parse(A14.Text);}
-                if (A21.Visible == true && ((A21.Text.Trim() != string.Empty) && (decimal.TryParse(A21.Text, out numberA)))){matrixA[1, 0] = int.Parse(A21.Text);}
-                if (A22.Visible == true && ((A22.Text.Trim() != string.Empty) && (decimal.TryParse(A22.Text, out numberA)))){matrixA[1, 1] = int.Parse(A22.Text);}
-                if (A23.Visible == true && ((A23.Text.Trim() != string.Empty) && (decimal.TryParse(A23.Text, out numberA)))){matrixA[1, 2] = int.Parse(A23.Text);}
-                if (A24.Visible == true && ((A24.Text.Trim() != string.Empty) && (decimal.TryParse(A24.Text, out numberA)))){matrixA[1, 3] = int.Parse(A24.Text);}
-                if (A32.Visible == true && ((A32.Text.Trim() != string.Empty) && (decimal.TryParse(A32.Text, out numberA)))){matrixA[2, 1] = int.Parse(A32.Text);}
-                if (A31.Visible == true && ((A31.Text.Trim() != string.Empty) && (decimal.TryParse(A31.Text, out numberA)))){matrixA[2, 0] = int.Parse(A31.Text);}
-                if (A33.Visible == true && ((A33.Text.Trim() != string.Empty) && (decimal.TryParse(A33.Text, out numberA)))){matrixA[2, 2] = int.Parse(A33.Text);}
-                if (A34.Visible == true && ((A34.Text.Trim() != string.Empty) && (decimal.TryParse(A34.Text, out numberA)))){matrixA[2, 3] = int.Parse(A34.Text);}
-                if (A41.Visible == true && ((A41.Text.Trim() != string.Empty) && (decimal.TryParse(A41.Text, out numberA)))){matrixA[3, 0] = int.Parse(A41.Text);}
-                if (A42.Visible == true && ((A42.Text.Trim() != string.Empty) && (decimal.TryParse(A42.Text, out numberA)))){matrixA[3, 1] = int.Parse(A42.Text);}
-                if (A43.Visible == true && ((A43.Text.Trim() != string.Empty) && (decimal.TryParse(A43.Text, out numberA)))){matrixA[3, 2] = int.Parse(A43.Text);}
-                if (A44.Visible == true && ((A44.Text.Trim() != string.Empty) && (decimal.TryParse(A44.Text, out numberA)))){matrixA[3, 3] = int.Parse(A44.Text);}
+                    }
+                } while (isThereNumber(0) == false);
             }
 
             if (matName == 1)
             {
                 matrixB = new int[rowB.Value, colB.Value];
-                bool isThereEmpty=false;
-                decimal numberB = 0;
 
                 do
                 {
-                    if (B11.Visible == true && (B11.Text.Trim() == string.Empty || !decimal.TryParse(B11.Text, out numberB))) { isThereEmpty = true;}
-                    if (B12.Visible == true && (B12.Text.Trim() == string.Empty || !decimal.TryParse(B12.Text, out numberB))) { isThereEmpty = true;}
-                    if (B13.Visible == true && (B13.Text.Trim() == string.Empty || !decimal.TryParse(B13.Text, out numberB))) { isThereEmpty = true;}
-                    if (B14.Visible == true && (B14.Text.Trim() == string.Empty || !decimal.TryParse(B14.Text, out numberB))) { isThereEmpty = true;}
-                    if (B21.Visible == true && (B21.Text.Trim() == string.Empty || !decimal.TryParse(B21.Text, out numberB))) { isThereEmpty = true;}
-                    if (B22.Visible == true && (B22.Text.Trim() == string.Empty || !decimal.TryParse(B22.Text, out numberB))) { isThereEmpty = true;}
-                    if (B23.Visible == true && (B23.Text.Trim() == string.Empty || !decimal.TryParse(B23.Text, out numberB))) { isThereEmpty = true;}
-                    if (B24.Visible == true && (B24.Text.Trim() == string.Empty || !decimal.TryParse(B24.Text, out numberB))) { isThereEmpty = true;}
-                    if (B32.Visible == true && (B32.Text.Trim() == string.Empty || !decimal.TryParse(B32.Text, out numberB))) { isThereEmpty = true;}
-                    if (B31.Visible == true && (B31.Text.Trim() == string.Empty || !decimal.TryParse(B31.Text, out numberB))) { isThereEmpty = true;}
-                    if (B33.Visible == true && (B33.Text.Trim() == string.Empty || !decimal.TryParse(B33.Text, out numberB))) { isThereEmpty = true;}
-                    if (B34.Visible == true && (B34.Text.Trim() == string.Empty || !decimal.TryParse(B34.Text, out numberB))) { isThereEmpty = true;}
-                    if (B41.Visible == true && (B41.Text.Trim() == string.Empty || !decimal.TryParse(B41.Text, out numberB))) { isThereEmpty = true;}
-                    if (B42.Visible == true && (B42.Text.Trim() == string.Empty || !decimal.TryParse(B42.Text, out numberB))) { isThereEmpty = true;}
-                    if (B43.Visible == true && (B43.Text.Trim() == string.Empty || !decimal.TryParse(B43.Text, out numberB))) { isThereEmpty = true;}
-                    if (B44.Visible == true && (B44.Text.Trim() == string.Empty || !decimal.TryParse(B44.Text, out numberB))) { isThereEmpty = true;}
-                    if (isThereEmpty == true)
+                    if (isThereNumber(1) == true)
+                    {
+                        if (B11.Visible == true) { matrixB[0, 0] = int.Parse(B11.Text); }
+                        if (B12.Visible == true) { matrixB[0, 1] = int.Parse(B12.Text); }
+                        if (B13.Visible == true) { matrixB[0, 2] = int.Parse(B13.Text); }
+                        if (B14.Visible == true) { matrixB[0, 3] = int.Parse(B14.Text); }
+                        if (B21.Visible == true) { matrixB[1, 0] = int.Parse(B21.Text); }
+                        if (B22.Visible == true) { matrixB[1, 1] = int.Parse(B22.Text); }
+                        if (B23.Visible == true) { matrixB[1, 2] = int.Parse(B23.Text); }
+                        if (B24.Visible == true) { matrixB[1, 3] = int.Parse(B24.Text); }
+                        if (B32.Visible == true) { matrixB[2, 1] = int.Parse(B32.Text); }
+                        if (B31.Visible == true) { matrixB[2, 0] = int.Parse(B31.Text); }
+                        if (B33.Visible == true) { matrixB[2, 2] = int.Parse(B33.Text); }
+                        if (B34.Visible == true) { matrixB[2, 3] = int.Parse(B34.Text); }
+                        if (B41.Visible == true) { matrixB[3, 0] = int.Parse(B41.Text); }
+                        if (B42.Visible == true) { matrixB[3, 1] = int.Parse(B42.Text); }
+                        if (B43.Visible == true) { matrixB[3, 2] = int.Parse(B43.Text); }
+                        if (B44.Visible == true) { matrixB[3, 3] = int.Parse(B44.Text); }
+                    }
+                    else
                     {
                         MessageBox.Show("B matrisinde eksik veya hatalý deðerler var. Lütfen kontrol ediniz...");
                         return;
-                    } else { isThereEmpty = false; }
-                } while (isThereEmpty == true);
-
-                if (B11.Visible == true && (B11.Text.Trim() != string.Empty && decimal.TryParse(B11.Text, out numberB))) { matrixB[0, 0] = int.Parse(B11.Text); }
-                if (B12.Visible == true && (B12.Text.Trim() != string.Empty && decimal.TryParse(B12.Text, out numberB))) { matrixB[0, 1] = int.Parse(B12.Text); }
-                if (B13.Visible == true && (B13.Text.Trim() != string.Empty && decimal.TryParse(B13.Text, out numberB))) { matrixB[0, 2] = int.Parse(B13.Text); }
-                if (B14.Visible == true && (B14.Text.Trim() != string.Empty && decimal.TryParse(B14.Text, out numberB))) { matrixB[0, 3] = int.Parse(B14.Text); }
-                if (B21.Visible == true && (B21.Text.Trim() != string.Empty && decimal.TryParse(B21.Text, out numberB))) { matrixB[1, 0] = int.Parse(B21.Text); }
-                if (B22.Visible == true && (B22.Text.Trim() != string.Empty && decimal.TryParse(B22.Text, out numberB))) { matrixB[1, 1] = int.Parse(B22.Text); }
-                if (B23.Visible == true && (B23.Text.Trim() != string.Empty && decimal.TryParse(B23.Text, out numberB))) { matrixB[1, 2] = int.Parse(B23.Text); }
-                if (B24.Visible == true && (B24.Text.Trim() != string.Empty && decimal.TryParse(B24.Text, out numberB))) { matrixB[1, 3] = int.Parse(B24.Text); }
-                if (B32.Visible == true && (B32.Text.Trim() != string.Empty && decimal.TryParse(B32.Text, out numberB))) { matrixB[2, 1] = int.Parse(B32.Text); }
-                if (B31.Visible == true && (B31.Text.Trim() != string.Empty && decimal.TryParse(B31.Text, out numberB))) { matrixB[2, 0] = int.Parse(B31.Text); }
-                if (B33.Visible == true && (B33.Text.Trim() != string.Empty && decimal.TryParse(B33.Text, out numberB))) { matrixB[2, 2] = int.Parse(B33.Text); }
-                if (B34.Visible == true && (B34.Text.Trim() != string.Empty && decimal.TryParse(B34.Text, out numberB))) { matrixB[2, 3] = int.Parse(B34.Text); }
-                if (B41.Visible == true && (B41.Text.Trim() != string.Empty && decimal.TryParse(B41.Text, out numberB))) { matrixB[3, 0] = int.Parse(B41.Text); }
-                if (B42.Visible == true && (B42.Text.Trim() != string.Empty && decimal.TryParse(B42.Text, out numberB))) { matrixB[3, 1] = int.Parse(B42.Text); }
-                if (B43.Visible == true && (B43.Text.Trim() != string.Empty && decimal.TryParse(B43.Text, out numberB))) { matrixB[3, 2] = int.Parse(B43.Text); }
-                if (B44.Visible == true && (B44.Text.Trim() != string.Empty && decimal.TryParse(B44.Text, out numberB))) { matrixB[3, 3] = int.Parse(B44.Text); }
+                    }
+                } while (isThereNumber(1) == false);
             }
 
             if(matName == 2)
@@ -339,120 +306,127 @@ namespace MatrisHesap
 
         private void calculator_Click(object sender, EventArgs e)
         {
-            matrixSetter(0);
-            matrixSetter(1);
-            switch (comboBox1.SelectedIndex)
+            if (isThereNumber(0) == true && isThereNumber(1) == true)
             {
-                case 0:
-                    
-                    if (colA.Value == rowB.Value)
-                    {
-                        rowC = rowA.Value;
-                        colC = colB.Value;
-                        matrixC = new int[rowC, colC];
-                        matrixSizer(2);
+                matrixSetter(0);
+                matrixSetter(1);
+                switch (comboBox1.SelectedIndex)
+                {
+                    case 0:
 
-                        for (int i=0; i<rowC; i++)
+                        if (colA.Value == rowB.Value)
                         {
-                            for (int j=0; j<colC; j++)
-                            {
-                                matrixC[i, j] = 0;
-                            }
-                        }
+                            rowC = rowA.Value;
+                            colC = colB.Value;
+                            matrixC = new int[rowC, colC];
+                            matrixSizer(2);
 
-                        for (int i=0; i<rowA.Value; i++)
-                        {
-                            for (int j=0; j<colB.Value; j++)
+                            for (int i = 0; i < rowC; i++)
                             {
-                                for (int k=0; k<colA.Value; k++)
+                                for (int j = 0; j < colC; j++)
                                 {
-                                    matrixC[i, j] += matrixA[i, k]*matrixB[k, j];
+                                    matrixC[i, j] = 0;
                                 }
                             }
-                        }
 
-                        matrixSetter(2);
-                    } else
-                    {
-                        MessageBox.Show("A matrisinin sütun sayýsý ve B matrisinin satýr sayýsý eþit olmalý.");
-                    }
-                    break;
-                case 1:
-                    if (colB.Value == rowA.Value)
-                    {
-                        rowC = rowB.Value;
-                        colC = colA.Value;
-                        matrixC = new int[rowC, colC];
-                        matrixSizer(2);
-
-                        for (int i = 0; i < rowC; i++)
-                        {
-                            for (int j = 0; j < colC; j++)
+                            for (int i = 0; i < rowA.Value; i++)
                             {
-                                matrixC[i, j] = 0;
-                            }
-                        }
-
-                        for (int i = 0; i < rowB.Value; i++)
-                        {
-                            for (int j = 0; j < colA.Value; j++)
-                            {
-                                for (int k = 0; k < colB.Value; k++)
+                                for (int j = 0; j < colB.Value; j++)
                                 {
-                                    matrixC[i, j] += matrixB[i, k] * matrixA[k, j];
+                                    for (int k = 0; k < colA.Value; k++)
+                                    {
+                                        matrixC[i, j] += matrixA[i, k] * matrixB[k, j];
+                                    }
                                 }
                             }
+
+                            matrixSetter(2);
                         }
-
-                        matrixSetter(2);
-                    }
-                    else
-                    {
-                        MessageBox.Show("A matrisinin sütun sayýsý ve B matrisinin satýr sayýsý eþit olmalý.");
-                    }
-                    break;
-                case 2:
-                    if (rowA.Value == rowB.Value && colA.Value == colB.Value)
-                    {
-                        rowC = rowA.Value;
-                        colC = colA.Value;
-                        matrixSizer(2);
-                        matrixC = new int[rowC, colC];
-
-                        for (int i = 0; i < rowC; i++)
+                        else
                         {
-                            for (int j = 0; j < colC; j++)
-                            {
-                                matrixC[i, j] = matrixA[i, j] + matrixB[i, j];
-                            }
+                            MessageBox.Show("Bu iþlemi yapabilmeniz için A matrisinin sütun sayýsý ve B matrisinin satýr sayýsý eþit olmalý.");
                         }
-                        matrixSetter(2);
-                    }
-                    else { MessageBox.Show("Toplama iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
-                    break;
-
-                case 3:
-                    if (rowA.Value == rowB.Value && colA.Value == colB.Value)
-                    {
-                        rowC = rowA.Value;
-                        colC = colA.Value;
-                        matrixSizer(2);
-                        matrixC = new int[rowC, colC];
-
-                        for (int i = 0; i < rowC; i++)
+                        break;
+                    case 1:
+                        if (colB.Value == rowA.Value)
                         {
-                            for (int j = 0; j < colC; j++)
-                            {
-                                matrixC[i, j] = matrixA[i, j] - matrixB[i, j];
-                            }
-                        }
-                        matrixSetter(2);
-                    }
-                    else { MessageBox.Show("Çýkartma iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
-                    break;
+                            rowC = rowB.Value;
+                            colC = colA.Value;
+                            matrixC = new int[rowC, colC];
+                            matrixSizer(2);
 
+                            for (int i = 0; i < rowC; i++)
+                            {
+                                for (int j = 0; j < colC; j++)
+                                {
+                                    matrixC[i, j] = 0;
+                                }
+                            }
+
+                            for (int i = 0; i < rowB.Value; i++)
+                            {
+                                for (int j = 0; j < colA.Value; j++)
+                                {
+                                    for (int k = 0; k < colB.Value; k++)
+                                    {
+                                        matrixC[i, j] += matrixB[i, k] * matrixA[k, j];
+                                    }
+                                }
+                            }
+
+                            matrixSetter(2);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bu iþlemi yapabilmeniz için B matrisinin sütun sayýsý ve A matrisinin satýr sayýsý eþit olmalý.");
+                        }
+                        break;
+                    case 2:
+                        if (rowA.Value == rowB.Value && colA.Value == colB.Value)
+                        {
+                            rowC = rowA.Value;
+                            colC = colA.Value;
+                            matrixSizer(2);
+                            matrixC = new int[rowC, colC];
+
+                            for (int i = 0; i < rowC; i++)
+                            {
+                                for (int j = 0; j < colC; j++)
+                                {
+                                    matrixC[i, j] = matrixA[i, j] + matrixB[i, j];
+                                }
+                            }
+                            matrixSetter(2);
+                        }
+                        else { MessageBox.Show("Toplama iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
+                        break;
+
+                    case 3:
+                        if (rowA.Value == rowB.Value && colA.Value == colB.Value)
+                        {
+                            rowC = rowA.Value;
+                            colC = colA.Value;
+                            matrixSizer(2);
+                            matrixC = new int[rowC, colC];
+
+                            for (int i = 0; i < rowC; i++)
+                            {
+                                for (int j = 0; j < colC; j++)
+                                {
+                                    matrixC[i, j] = matrixA[i, j] - matrixB[i, j];
+                                }
+                            }
+                            matrixSetter(2);
+                        }
+                        else { MessageBox.Show("Çýkartma iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
+                        break;
+
+                }
             }
-         
+            else
+            {
+                MessageBox.Show("Matrislerde eksiklik veya hata var, lütfen kontrol edip tekrar deneyin.");
+            }
         }
 
         private void rowA_Scroll(object sender, EventArgs e)
