@@ -272,7 +272,7 @@ namespace MatrisHesap
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex==10 || comboBox1.SelectedIndex == 11)
+            if (comboBox1.SelectedIndex == 8 || comboBox1.SelectedIndex == 9 || comboBox1.SelectedIndex==10 || comboBox1.SelectedIndex == 11)
             {
                 label3.Visible = true;
                 label4.Visible = true;
@@ -423,12 +423,44 @@ namespace MatrisHesap
                     }
                     else { MessageBox.Show("Çýkartma iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
                     break;
+                case 8:
+                    if (isThereNumber(0) == true) 
+                    {
+                        if (comboBox2.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && rowA.Value >= comboBox2.SelectedIndex+1 && colA.Value >= comboBox3.SelectedIndex+1)
+                        {
+                            matrixSetter(0);
+                            rowC = rowA.Value - 1;
+                            colC = colA.Value - 1;
+                            matrixC = new int[rowC, colC];
+                            matrixSizer(2);
+                            matrixC = minor(0, comboBox2.SelectedIndex+1, comboBox3.SelectedIndex+1);
+                            matrixSetter(2);
+                        } else { MessageBox.Show("Lütfen minör hesabý için satýr ve sütun seçimini matrise uygun olarak yapýnýz."); }
+                    } else { MessageBox.Show("Lütfen matrisi kontrol ediniz."); }
+                    break;
+                case 9:
+                    if (isThereNumber(1) == true)
+                    {
+                        if (comboBox2.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && rowB.Value >= comboBox2.SelectedIndex + 1 && colB.Value >= comboBox3.SelectedIndex + 1)
+                        {
+                            matrixSetter(1);
+                            rowC = rowB.Value - 1;
+                            colC = colB.Value - 1;
+                            matrixC = new int[rowC, colC];
+                            matrixSizer(2);
+                            matrixC = minor(1, comboBox2.SelectedIndex+1, comboBox3.SelectedIndex+1);
+                            matrixSetter(2);
+                        }
+                        else { MessageBox.Show("Lütfen minör hesabý için satýr ve sütun seçimini matrise uygun olarak yapýnýz."); }
+                    }
+                    else { MessageBox.Show("Lütfen matrisi kontrol ediniz."); }
+                    break;
                 case -1:
                     MessageBox.Show("Lütfen bir iþlem seçiniz.");
                     break;
-                default:
+                /*default:
                     MessageBox.Show("Bu iþlem geliþtirme aþamasýndadýr.");
-                    break;
+                    break;*/
             }
         }
 
@@ -543,6 +575,51 @@ namespace MatrisHesap
                 MessageBox.Show("Yalnýzca kare matrisler birim matris olabilir.");
             }
             
+        }
+
+        public int[,] minor(int matName, int row, int col)
+        {
+            int[,] minorMatrix = new int[2,2];
+            
+            
+            if(matName == 0 && isThereNumber(0) == true)
+            {
+                minorMatrix = new int[rowA.Value - 1, colA.Value - 1];
+                int k=0, l= 0;
+
+                for (int i = 0; i < rowA.Value - 1; i++)
+                {
+                    
+                    for (int j = 0; j < colA.Value - 1; j++)
+                    {
+                        if (i < row - 1) { k = i; } else { k = i + 1; }
+                        if (j < col - 1) { l = j; } else { l = j + 1; }
+                        minorMatrix[i, j] = matrixA[k, l];
+                    }
+                }
+            }
+
+            if (matName == 1 && isThereNumber(1) == true)
+            {
+                minorMatrix = new int[rowB.Value - 1, colB.Value - 1];
+                int k = 0, l = 0;
+
+                for (int i = 0; i < rowB.Value - 1; i++)
+                {
+
+                    for (int j = 0; j < colB.Value - 1; j++)
+                    {
+                        if (i < row - 1) { k = i; } else {k = i + 1; }
+                        if (j < col - 1) { l = j; } else {l = j + 1;}
+                        minorMatrix[i, j] = matrixB[k, l];
+                    }
+                }
+            }
+            return minorMatrix;
+        }
+        public int determinant(int matName, int row, int col)
+        {
+            return 0;
         }
 
         private void colB_Scroll(object sender, EventArgs e)
