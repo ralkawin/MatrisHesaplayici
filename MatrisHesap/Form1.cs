@@ -305,127 +305,130 @@ namespace MatrisHesap
         }
 
         private void calculator_Click(object sender, EventArgs e)
-        {
-            if (isThereNumber(0) == true && isThereNumber(1) == true)
+        {       
+            switch (comboBox1.SelectedIndex)
             {
-                matrixSetter(0);
-                matrixSetter(1);
-                switch (comboBox1.SelectedIndex)
-                {
-                    case 0:
+                case 0:
+                    if (colA.Value == rowB.Value && isThereNumber(0) == true && isThereNumber(1) == true)
+                    {
+                        matrixSetter(0);
+                        matrixSetter(1);
+                        rowC = rowA.Value;
+                        colC = colB.Value;
+                        matrixC = new int[rowC, colC];
+                        matrixSizer(2);
 
-                        if (colA.Value == rowB.Value)
+                        for (int i = 0; i < rowC; i++)
                         {
-                            rowC = rowA.Value;
-                            colC = colB.Value;
-                            matrixC = new int[rowC, colC];
-                            matrixSizer(2);
-
-                            for (int i = 0; i < rowC; i++)
+                            for (int j = 0; j < colC; j++)
                             {
-                                for (int j = 0; j < colC; j++)
+                                matrixC[i, j] = 0;
+                            }
+                        }
+
+                        for (int i = 0; i < rowA.Value; i++)
+                        {
+                            for (int j = 0; j < colB.Value; j++)
+                            {
+                                for (int k = 0; k < colA.Value; k++)
                                 {
-                                    matrixC[i, j] = 0;
+                                    matrixC[i, j] += matrixA[i, k] * matrixB[k, j];
                                 }
                             }
+                        }
 
-                            for (int i = 0; i < rowA.Value; i++)
+                        matrixSetter(2);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bu iþlemi yapabilmeniz için A matrisinin sütun sayýsý B matrisinin satýr sayýsýna eþit ve matrisler dolu olmalýdýr.");
+                    }
+                    break;
+                case 1:
+                    if (colB.Value == rowA.Value && isThereNumber(0) == true && isThereNumber(1) == true)
+                    {
+                        matrixSetter(0);
+                        matrixSetter(1);
+                        rowC = rowB.Value;
+                        colC = colA.Value;
+                        matrixC = new int[rowC, colC];
+                        matrixSizer(2);
+
+                        for (int i = 0; i < rowC; i++)
+                        {
+                            for (int j = 0; j < colC; j++)
                             {
-                                for (int j = 0; j < colB.Value; j++)
+                                matrixC[i, j] = 0;
+                            }
+                        }
+
+                        for (int i = 0; i < rowB.Value; i++)
+                        {
+                            for (int j = 0; j < colA.Value; j++)
+                            {
+                                for (int k = 0; k < colB.Value; k++)
                                 {
-                                    for (int k = 0; k < colA.Value; k++)
-                                    {
-                                        matrixC[i, j] += matrixA[i, k] * matrixB[k, j];
-                                    }
+                                    matrixC[i, j] += matrixB[i, k] * matrixA[k, j];
                                 }
                             }
-
-                            matrixSetter(2);
                         }
-                        else
-                        {
-                            MessageBox.Show("Bu iþlemi yapabilmeniz için A matrisinin sütun sayýsý ve B matrisinin satýr sayýsý eþit olmalý.");
-                        }
-                        break;
-                    case 1:
-                        if (colB.Value == rowA.Value)
-                        {
-                            rowC = rowB.Value;
-                            colC = colA.Value;
-                            matrixC = new int[rowC, colC];
-                            matrixSizer(2);
 
-                            for (int i = 0; i < rowC; i++)
+                        matrixSetter(2);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bu iþlemi yapabilmeniz için B matrisinin sütun sayýsý A matrisinin satýr sayýsýna eþit ve matrisler dolu olmalýdýr.");
+                    }
+                    break;
+                case 2:
+                    if (rowA.Value == rowB.Value && colA.Value == colB.Value && isThereNumber(0) == true && isThereNumber(1) == true)
+                    {
+                        matrixSetter(0);
+                        matrixSetter(1);
+                        rowC = rowA.Value;
+                        colC = colA.Value;
+                        matrixSizer(2);
+                        matrixC = new int[rowC, colC];
+
+                        for (int i = 0; i < rowC; i++)
+                        {
+                            for (int j = 0; j < colC; j++)
                             {
-                                for (int j = 0; j < colC; j++)
-                                {
-                                    matrixC[i, j] = 0;
-                                }
+                                matrixC[i, j] = matrixA[i, j] + matrixB[i, j];
                             }
-
-                            for (int i = 0; i < rowB.Value; i++)
-                            {
-                                for (int j = 0; j < colA.Value; j++)
-                                {
-                                    for (int k = 0; k < colB.Value; k++)
-                                    {
-                                        matrixC[i, j] += matrixB[i, k] * matrixA[k, j];
-                                    }
-                                }
-                            }
-
-                            matrixSetter(2);
                         }
-                        else
+                        matrixSetter(2);
+                    }
+                    else { MessageBox.Show("Toplama iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
+                    break;
+
+                case 3:
+                    if (rowA.Value == rowB.Value && colA.Value == colB.Value && isThereNumber(0) == true && isThereNumber(1) == true)
+                    {
+                        matrixSetter(0);
+                        matrixSetter(1);
+                        rowC = rowA.Value;
+                        colC = colA.Value;
+                        matrixSizer(2);
+                        matrixC = new int[rowC, colC];
+
+                        for (int i = 0; i < rowC; i++)
                         {
-                            MessageBox.Show("Bu iþlemi yapabilmeniz için B matrisinin sütun sayýsý ve A matrisinin satýr sayýsý eþit olmalý.");
-                        }
-                        break;
-                    case 2:
-                        if (rowA.Value == rowB.Value && colA.Value == colB.Value)
-                        {
-                            rowC = rowA.Value;
-                            colC = colA.Value;
-                            matrixSizer(2);
-                            matrixC = new int[rowC, colC];
-
-                            for (int i = 0; i < rowC; i++)
+                            for (int j = 0; j < colC; j++)
                             {
-                                for (int j = 0; j < colC; j++)
-                                {
-                                    matrixC[i, j] = matrixA[i, j] + matrixB[i, j];
-                                }
+                                matrixC[i, j] = matrixA[i, j] - matrixB[i, j];
                             }
-                            matrixSetter(2);
                         }
-                        else { MessageBox.Show("Toplama iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
-                        break;
-
-                    case 3:
-                        if (rowA.Value == rowB.Value && colA.Value == colB.Value)
-                        {
-                            rowC = rowA.Value;
-                            colC = colA.Value;
-                            matrixSizer(2);
-                            matrixC = new int[rowC, colC];
-
-                            for (int i = 0; i < rowC; i++)
-                            {
-                                for (int j = 0; j < colC; j++)
-                                {
-                                    matrixC[i, j] = matrixA[i, j] - matrixB[i, j];
-                                }
-                            }
-                            matrixSetter(2);
-                        }
-                        else { MessageBox.Show("Çýkartma iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
-                        break;
-
-                }
-            }
-            else
-            {
-                MessageBox.Show("Matrislerde eksiklik veya hata var, lütfen kontrol edip tekrar deneyin.");
+                        matrixSetter(2);
+                    }
+                    else { MessageBox.Show("Çýkartma iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
+                    break;
+                case -1:
+                    MessageBox.Show("Lütfen bir iþlem seçiniz.");
+                    break;
+                default:
+                    MessageBox.Show("Bu iþlem geliþtirme aþamasýndadýr.");
+                    break;
             }
         }
 

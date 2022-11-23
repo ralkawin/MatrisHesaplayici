@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rowA = new System.Windows.Forms.TrackBar();
             this.colA = new System.Windows.Forms.TrackBar();
             this.A11 = new System.Windows.Forms.TextBox();
@@ -103,9 +104,12 @@
             // 
             // rowA
             // 
-            this.rowA.Location = new System.Drawing.Point(32, 35);
+            this.rowA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rowA.Location = new System.Drawing.Point(57, 64);
             this.rowA.Maximum = 4;
+            this.rowA.MaximumSize = new System.Drawing.Size(74, 56);
             this.rowA.Minimum = 1;
+            this.rowA.MinimumSize = new System.Drawing.Size(74, 56);
             this.rowA.Name = "rowA";
             this.rowA.Size = new System.Drawing.Size(74, 56);
             this.rowA.TabIndex = 0;
@@ -114,9 +118,12 @@
             // 
             // colA
             // 
-            this.colA.Location = new System.Drawing.Point(112, 35);
+            this.colA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.colA.Location = new System.Drawing.Point(137, 64);
             this.colA.Maximum = 4;
+            this.colA.MaximumSize = new System.Drawing.Size(74, 56);
             this.colA.Minimum = 1;
+            this.colA.MinimumSize = new System.Drawing.Size(74, 56);
             this.colA.Name = "colA";
             this.colA.Size = new System.Drawing.Size(74, 56);
             this.colA.TabIndex = 1;
@@ -125,9 +132,12 @@
             // 
             // A11
             // 
+            this.A11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A11.Location = new System.Drawing.Point(32, 97);
+            this.A11.Location = new System.Drawing.Point(57, 126);
+            this.A11.MaximumSize = new System.Drawing.Size(34, 27);
             this.A11.MaxLength = 3;
+            this.A11.MinimumSize = new System.Drawing.Size(34, 27);
             this.A11.Name = "A11";
             this.A11.Size = new System.Drawing.Size(34, 27);
             this.A11.TabIndex = 2;
@@ -135,9 +145,12 @@
             // 
             // A12
             // 
+            this.A12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A12.Location = new System.Drawing.Point(72, 97);
+            this.A12.Location = new System.Drawing.Point(97, 126);
+            this.A12.MaximumSize = new System.Drawing.Size(34, 27);
             this.A12.MaxLength = 3;
+            this.A12.MinimumSize = new System.Drawing.Size(34, 27);
             this.A12.Name = "A12";
             this.A12.Size = new System.Drawing.Size(34, 27);
             this.A12.TabIndex = 3;
@@ -145,9 +158,12 @@
             // 
             // A13
             // 
+            this.A13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A13.Location = new System.Drawing.Point(112, 97);
+            this.A13.Location = new System.Drawing.Point(137, 126);
+            this.A13.MaximumSize = new System.Drawing.Size(34, 27);
             this.A13.MaxLength = 3;
+            this.A13.MinimumSize = new System.Drawing.Size(34, 27);
             this.A13.Name = "A13";
             this.A13.Size = new System.Drawing.Size(34, 27);
             this.A13.TabIndex = 4;
@@ -155,9 +171,12 @@
             // 
             // A14
             // 
+            this.A14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A14.Location = new System.Drawing.Point(152, 97);
+            this.A14.Location = new System.Drawing.Point(177, 126);
+            this.A14.MaximumSize = new System.Drawing.Size(34, 27);
             this.A14.MaxLength = 3;
+            this.A14.MinimumSize = new System.Drawing.Size(34, 27);
             this.A14.Name = "A14";
             this.A14.Size = new System.Drawing.Size(34, 27);
             this.A14.TabIndex = 5;
@@ -165,9 +184,12 @@
             // 
             // A24
             // 
+            this.A24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A24.Location = new System.Drawing.Point(152, 130);
+            this.A24.Location = new System.Drawing.Point(177, 159);
+            this.A24.MaximumSize = new System.Drawing.Size(34, 27);
             this.A24.MaxLength = 3;
+            this.A24.MinimumSize = new System.Drawing.Size(34, 27);
             this.A24.Name = "A24";
             this.A24.Size = new System.Drawing.Size(34, 27);
             this.A24.TabIndex = 9;
@@ -175,9 +197,12 @@
             // 
             // A23
             // 
+            this.A23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A23.Location = new System.Drawing.Point(112, 130);
+            this.A23.Location = new System.Drawing.Point(137, 159);
+            this.A23.MaximumSize = new System.Drawing.Size(34, 27);
             this.A23.MaxLength = 3;
+            this.A23.MinimumSize = new System.Drawing.Size(34, 27);
             this.A23.Name = "A23";
             this.A23.Size = new System.Drawing.Size(34, 27);
             this.A23.TabIndex = 8;
@@ -185,9 +210,12 @@
             // 
             // A22
             // 
+            this.A22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A22.Location = new System.Drawing.Point(72, 130);
+            this.A22.Location = new System.Drawing.Point(97, 159);
+            this.A22.MaximumSize = new System.Drawing.Size(34, 27);
             this.A22.MaxLength = 3;
+            this.A22.MinimumSize = new System.Drawing.Size(34, 27);
             this.A22.Name = "A22";
             this.A22.Size = new System.Drawing.Size(34, 27);
             this.A22.TabIndex = 7;
@@ -195,9 +223,12 @@
             // 
             // A21
             // 
+            this.A21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A21.Location = new System.Drawing.Point(32, 130);
+            this.A21.Location = new System.Drawing.Point(57, 159);
+            this.A21.MaximumSize = new System.Drawing.Size(34, 27);
             this.A21.MaxLength = 3;
+            this.A21.MinimumSize = new System.Drawing.Size(34, 27);
             this.A21.Name = "A21";
             this.A21.Size = new System.Drawing.Size(34, 27);
             this.A21.TabIndex = 6;
@@ -205,9 +236,12 @@
             // 
             // A34
             // 
+            this.A34.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A34.Location = new System.Drawing.Point(152, 163);
+            this.A34.Location = new System.Drawing.Point(177, 192);
+            this.A34.MaximumSize = new System.Drawing.Size(34, 27);
             this.A34.MaxLength = 3;
+            this.A34.MinimumSize = new System.Drawing.Size(34, 27);
             this.A34.Name = "A34";
             this.A34.Size = new System.Drawing.Size(34, 27);
             this.A34.TabIndex = 13;
@@ -215,9 +249,12 @@
             // 
             // A33
             // 
+            this.A33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A33.Location = new System.Drawing.Point(112, 163);
+            this.A33.Location = new System.Drawing.Point(137, 192);
+            this.A33.MaximumSize = new System.Drawing.Size(34, 27);
             this.A33.MaxLength = 3;
+            this.A33.MinimumSize = new System.Drawing.Size(34, 27);
             this.A33.Name = "A33";
             this.A33.Size = new System.Drawing.Size(34, 27);
             this.A33.TabIndex = 12;
@@ -225,9 +262,12 @@
             // 
             // A32
             // 
+            this.A32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A32.Location = new System.Drawing.Point(72, 163);
+            this.A32.Location = new System.Drawing.Point(97, 192);
+            this.A32.MaximumSize = new System.Drawing.Size(34, 27);
             this.A32.MaxLength = 3;
+            this.A32.MinimumSize = new System.Drawing.Size(34, 27);
             this.A32.Name = "A32";
             this.A32.Size = new System.Drawing.Size(34, 27);
             this.A32.TabIndex = 11;
@@ -235,9 +275,12 @@
             // 
             // A31
             // 
+            this.A31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A31.Location = new System.Drawing.Point(32, 163);
+            this.A31.Location = new System.Drawing.Point(57, 192);
+            this.A31.MaximumSize = new System.Drawing.Size(34, 27);
             this.A31.MaxLength = 3;
+            this.A31.MinimumSize = new System.Drawing.Size(34, 27);
             this.A31.Name = "A31";
             this.A31.Size = new System.Drawing.Size(34, 27);
             this.A31.TabIndex = 10;
@@ -245,9 +288,12 @@
             // 
             // A44
             // 
+            this.A44.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A44.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A44.Location = new System.Drawing.Point(152, 196);
+            this.A44.Location = new System.Drawing.Point(177, 225);
+            this.A44.MaximumSize = new System.Drawing.Size(34, 27);
             this.A44.MaxLength = 3;
+            this.A44.MinimumSize = new System.Drawing.Size(34, 27);
             this.A44.Name = "A44";
             this.A44.Size = new System.Drawing.Size(34, 27);
             this.A44.TabIndex = 17;
@@ -255,9 +301,12 @@
             // 
             // A43
             // 
+            this.A43.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A43.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A43.Location = new System.Drawing.Point(112, 196);
+            this.A43.Location = new System.Drawing.Point(137, 225);
+            this.A43.MaximumSize = new System.Drawing.Size(34, 27);
             this.A43.MaxLength = 3;
+            this.A43.MinimumSize = new System.Drawing.Size(34, 27);
             this.A43.Name = "A43";
             this.A43.Size = new System.Drawing.Size(34, 27);
             this.A43.TabIndex = 16;
@@ -265,9 +314,12 @@
             // 
             // A42
             // 
+            this.A42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A42.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A42.Location = new System.Drawing.Point(72, 196);
+            this.A42.Location = new System.Drawing.Point(97, 225);
+            this.A42.MaximumSize = new System.Drawing.Size(34, 27);
             this.A42.MaxLength = 3;
+            this.A42.MinimumSize = new System.Drawing.Size(34, 27);
             this.A42.Name = "A42";
             this.A42.Size = new System.Drawing.Size(34, 27);
             this.A42.TabIndex = 15;
@@ -275,9 +327,12 @@
             // 
             // A41
             // 
+            this.A41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.A41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.A41.Location = new System.Drawing.Point(32, 196);
+            this.A41.Location = new System.Drawing.Point(57, 225);
+            this.A41.MaximumSize = new System.Drawing.Size(34, 27);
             this.A41.MaxLength = 3;
+            this.A41.MinimumSize = new System.Drawing.Size(34, 27);
             this.A41.Name = "A41";
             this.A41.Size = new System.Drawing.Size(34, 27);
             this.A41.TabIndex = 14;
@@ -285,7 +340,10 @@
             // 
             // setA
             // 
-            this.setA.Location = new System.Drawing.Point(32, 265);
+            this.setA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.setA.Location = new System.Drawing.Point(57, 294);
+            this.setA.MaximumSize = new System.Drawing.Size(154, 29);
+            this.setA.MinimumSize = new System.Drawing.Size(154, 29);
             this.setA.Name = "setA";
             this.setA.Size = new System.Drawing.Size(154, 29);
             this.setA.TabIndex = 18;
@@ -295,7 +353,10 @@
             // 
             // setAbirim
             // 
-            this.setAbirim.Location = new System.Drawing.Point(32, 300);
+            this.setAbirim.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.setAbirim.Location = new System.Drawing.Point(57, 329);
+            this.setAbirim.MaximumSize = new System.Drawing.Size(154, 29);
+            this.setAbirim.MinimumSize = new System.Drawing.Size(154, 29);
             this.setAbirim.Name = "setAbirim";
             this.setAbirim.Size = new System.Drawing.Size(154, 29);
             this.setAbirim.TabIndex = 19;
@@ -305,7 +366,10 @@
             // 
             // cleanerA
             // 
-            this.cleanerA.Location = new System.Drawing.Point(32, 335);
+            this.cleanerA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cleanerA.Location = new System.Drawing.Point(57, 364);
+            this.cleanerA.MaximumSize = new System.Drawing.Size(154, 29);
+            this.cleanerA.MinimumSize = new System.Drawing.Size(154, 29);
             this.cleanerA.Name = "cleanerA";
             this.cleanerA.Size = new System.Drawing.Size(154, 29);
             this.cleanerA.TabIndex = 20;
@@ -315,7 +379,10 @@
             // 
             // cleanerB
             // 
-            this.cleanerB.Location = new System.Drawing.Point(251, 335);
+            this.cleanerB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cleanerB.Location = new System.Drawing.Point(276, 364);
+            this.cleanerB.MaximumSize = new System.Drawing.Size(154, 29);
+            this.cleanerB.MinimumSize = new System.Drawing.Size(154, 29);
             this.cleanerB.Name = "cleanerB";
             this.cleanerB.Size = new System.Drawing.Size(154, 29);
             this.cleanerB.TabIndex = 41;
@@ -325,7 +392,10 @@
             // 
             // setBbirim
             // 
-            this.setBbirim.Location = new System.Drawing.Point(251, 300);
+            this.setBbirim.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.setBbirim.Location = new System.Drawing.Point(276, 329);
+            this.setBbirim.MaximumSize = new System.Drawing.Size(154, 29);
+            this.setBbirim.MinimumSize = new System.Drawing.Size(154, 29);
             this.setBbirim.Name = "setBbirim";
             this.setBbirim.Size = new System.Drawing.Size(154, 29);
             this.setBbirim.TabIndex = 40;
@@ -335,7 +405,10 @@
             // 
             // setB
             // 
-            this.setB.Location = new System.Drawing.Point(251, 265);
+            this.setB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.setB.Location = new System.Drawing.Point(276, 294);
+            this.setB.MaximumSize = new System.Drawing.Size(154, 29);
+            this.setB.MinimumSize = new System.Drawing.Size(154, 29);
             this.setB.Name = "setB";
             this.setB.Size = new System.Drawing.Size(154, 29);
             this.setB.TabIndex = 39;
@@ -345,9 +418,12 @@
             // 
             // B44
             // 
+            this.B44.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B44.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B44.Location = new System.Drawing.Point(371, 196);
+            this.B44.Location = new System.Drawing.Point(396, 225);
+            this.B44.MaximumSize = new System.Drawing.Size(34, 27);
             this.B44.MaxLength = 3;
+            this.B44.MinimumSize = new System.Drawing.Size(34, 27);
             this.B44.Name = "B44";
             this.B44.Size = new System.Drawing.Size(34, 27);
             this.B44.TabIndex = 38;
@@ -355,9 +431,12 @@
             // 
             // B43
             // 
+            this.B43.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B43.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B43.Location = new System.Drawing.Point(331, 196);
+            this.B43.Location = new System.Drawing.Point(356, 225);
+            this.B43.MaximumSize = new System.Drawing.Size(34, 27);
             this.B43.MaxLength = 3;
+            this.B43.MinimumSize = new System.Drawing.Size(34, 27);
             this.B43.Name = "B43";
             this.B43.Size = new System.Drawing.Size(34, 27);
             this.B43.TabIndex = 37;
@@ -365,9 +444,12 @@
             // 
             // B42
             // 
+            this.B42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B42.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B42.Location = new System.Drawing.Point(291, 196);
+            this.B42.Location = new System.Drawing.Point(316, 225);
+            this.B42.MaximumSize = new System.Drawing.Size(34, 27);
             this.B42.MaxLength = 3;
+            this.B42.MinimumSize = new System.Drawing.Size(34, 27);
             this.B42.Name = "B42";
             this.B42.Size = new System.Drawing.Size(34, 27);
             this.B42.TabIndex = 36;
@@ -375,9 +457,12 @@
             // 
             // B41
             // 
+            this.B41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B41.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B41.Location = new System.Drawing.Point(251, 196);
+            this.B41.Location = new System.Drawing.Point(276, 225);
+            this.B41.MaximumSize = new System.Drawing.Size(34, 27);
             this.B41.MaxLength = 3;
+            this.B41.MinimumSize = new System.Drawing.Size(34, 27);
             this.B41.Name = "B41";
             this.B41.Size = new System.Drawing.Size(34, 27);
             this.B41.TabIndex = 35;
@@ -385,9 +470,12 @@
             // 
             // B34
             // 
+            this.B34.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B34.Location = new System.Drawing.Point(371, 163);
+            this.B34.Location = new System.Drawing.Point(396, 192);
+            this.B34.MaximumSize = new System.Drawing.Size(34, 27);
             this.B34.MaxLength = 3;
+            this.B34.MinimumSize = new System.Drawing.Size(34, 27);
             this.B34.Name = "B34";
             this.B34.Size = new System.Drawing.Size(34, 27);
             this.B34.TabIndex = 34;
@@ -395,9 +483,12 @@
             // 
             // B33
             // 
+            this.B33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B33.Location = new System.Drawing.Point(331, 163);
+            this.B33.Location = new System.Drawing.Point(356, 192);
+            this.B33.MaximumSize = new System.Drawing.Size(34, 27);
             this.B33.MaxLength = 3;
+            this.B33.MinimumSize = new System.Drawing.Size(34, 27);
             this.B33.Name = "B33";
             this.B33.Size = new System.Drawing.Size(34, 27);
             this.B33.TabIndex = 33;
@@ -405,9 +496,12 @@
             // 
             // B32
             // 
+            this.B32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B32.Location = new System.Drawing.Point(291, 163);
+            this.B32.Location = new System.Drawing.Point(316, 192);
+            this.B32.MaximumSize = new System.Drawing.Size(34, 27);
             this.B32.MaxLength = 3;
+            this.B32.MinimumSize = new System.Drawing.Size(34, 27);
             this.B32.Name = "B32";
             this.B32.Size = new System.Drawing.Size(34, 27);
             this.B32.TabIndex = 32;
@@ -415,9 +509,12 @@
             // 
             // B31
             // 
+            this.B31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B31.Location = new System.Drawing.Point(251, 163);
+            this.B31.Location = new System.Drawing.Point(276, 192);
+            this.B31.MaximumSize = new System.Drawing.Size(34, 27);
             this.B31.MaxLength = 3;
+            this.B31.MinimumSize = new System.Drawing.Size(34, 27);
             this.B31.Name = "B31";
             this.B31.Size = new System.Drawing.Size(34, 27);
             this.B31.TabIndex = 31;
@@ -425,9 +522,12 @@
             // 
             // B24
             // 
+            this.B24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B24.Location = new System.Drawing.Point(371, 130);
+            this.B24.Location = new System.Drawing.Point(396, 159);
+            this.B24.MaximumSize = new System.Drawing.Size(34, 27);
             this.B24.MaxLength = 3;
+            this.B24.MinimumSize = new System.Drawing.Size(34, 27);
             this.B24.Name = "B24";
             this.B24.Size = new System.Drawing.Size(34, 27);
             this.B24.TabIndex = 30;
@@ -435,9 +535,12 @@
             // 
             // B23
             // 
+            this.B23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B23.Location = new System.Drawing.Point(331, 130);
+            this.B23.Location = new System.Drawing.Point(356, 159);
+            this.B23.MaximumSize = new System.Drawing.Size(34, 27);
             this.B23.MaxLength = 3;
+            this.B23.MinimumSize = new System.Drawing.Size(34, 27);
             this.B23.Name = "B23";
             this.B23.Size = new System.Drawing.Size(34, 27);
             this.B23.TabIndex = 29;
@@ -445,9 +548,12 @@
             // 
             // B22
             // 
+            this.B22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B22.Location = new System.Drawing.Point(291, 130);
+            this.B22.Location = new System.Drawing.Point(316, 159);
+            this.B22.MaximumSize = new System.Drawing.Size(34, 27);
             this.B22.MaxLength = 3;
+            this.B22.MinimumSize = new System.Drawing.Size(34, 27);
             this.B22.Name = "B22";
             this.B22.Size = new System.Drawing.Size(34, 27);
             this.B22.TabIndex = 28;
@@ -455,9 +561,12 @@
             // 
             // B21
             // 
+            this.B21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B21.Location = new System.Drawing.Point(251, 130);
+            this.B21.Location = new System.Drawing.Point(276, 159);
+            this.B21.MaximumSize = new System.Drawing.Size(34, 27);
             this.B21.MaxLength = 3;
+            this.B21.MinimumSize = new System.Drawing.Size(34, 27);
             this.B21.Name = "B21";
             this.B21.Size = new System.Drawing.Size(34, 27);
             this.B21.TabIndex = 27;
@@ -465,9 +574,12 @@
             // 
             // B14
             // 
+            this.B14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B14.Location = new System.Drawing.Point(371, 97);
+            this.B14.Location = new System.Drawing.Point(396, 126);
+            this.B14.MaximumSize = new System.Drawing.Size(34, 27);
             this.B14.MaxLength = 3;
+            this.B14.MinimumSize = new System.Drawing.Size(34, 27);
             this.B14.Name = "B14";
             this.B14.Size = new System.Drawing.Size(34, 27);
             this.B14.TabIndex = 26;
@@ -475,9 +587,12 @@
             // 
             // B13
             // 
+            this.B13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B13.Location = new System.Drawing.Point(331, 97);
+            this.B13.Location = new System.Drawing.Point(356, 126);
+            this.B13.MaximumSize = new System.Drawing.Size(34, 27);
             this.B13.MaxLength = 3;
+            this.B13.MinimumSize = new System.Drawing.Size(34, 27);
             this.B13.Name = "B13";
             this.B13.Size = new System.Drawing.Size(34, 27);
             this.B13.TabIndex = 25;
@@ -485,9 +600,12 @@
             // 
             // B12
             // 
+            this.B12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B12.Location = new System.Drawing.Point(291, 97);
+            this.B12.Location = new System.Drawing.Point(316, 126);
+            this.B12.MaximumSize = new System.Drawing.Size(34, 27);
             this.B12.MaxLength = 3;
+            this.B12.MinimumSize = new System.Drawing.Size(34, 27);
             this.B12.Name = "B12";
             this.B12.Size = new System.Drawing.Size(34, 27);
             this.B12.TabIndex = 24;
@@ -495,9 +613,12 @@
             // 
             // B11
             // 
+            this.B11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.B11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.B11.Location = new System.Drawing.Point(251, 97);
+            this.B11.Location = new System.Drawing.Point(276, 126);
+            this.B11.MaximumSize = new System.Drawing.Size(34, 27);
             this.B11.MaxLength = 3;
+            this.B11.MinimumSize = new System.Drawing.Size(34, 27);
             this.B11.Name = "B11";
             this.B11.Size = new System.Drawing.Size(34, 27);
             this.B11.TabIndex = 23;
@@ -505,9 +626,12 @@
             // 
             // colB
             // 
-            this.colB.Location = new System.Drawing.Point(331, 35);
+            this.colB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.colB.Location = new System.Drawing.Point(356, 64);
             this.colB.Maximum = 4;
+            this.colB.MaximumSize = new System.Drawing.Size(74, 56);
             this.colB.Minimum = 1;
+            this.colB.MinimumSize = new System.Drawing.Size(74, 56);
             this.colB.Name = "colB";
             this.colB.Size = new System.Drawing.Size(74, 56);
             this.colB.TabIndex = 22;
@@ -516,9 +640,12 @@
             // 
             // rowB
             // 
-            this.rowB.Location = new System.Drawing.Point(251, 35);
+            this.rowB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rowB.Location = new System.Drawing.Point(276, 64);
             this.rowB.Maximum = 4;
+            this.rowB.MaximumSize = new System.Drawing.Size(74, 56);
             this.rowB.Minimum = 1;
+            this.rowB.MinimumSize = new System.Drawing.Size(74, 56);
             this.rowB.Name = "rowB";
             this.rowB.Size = new System.Drawing.Size(74, 56);
             this.rowB.TabIndex = 21;
@@ -527,9 +654,12 @@
             // 
             // C11
             // 
+            this.C11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C11.Location = new System.Drawing.Point(496, 97);
+            this.C11.Location = new System.Drawing.Point(521, 126);
+            this.C11.MaximumSize = new System.Drawing.Size(54, 27);
             this.C11.MaxLength = 4;
+            this.C11.MinimumSize = new System.Drawing.Size(54, 27);
             this.C11.Name = "C11";
             this.C11.ReadOnly = true;
             this.C11.Size = new System.Drawing.Size(54, 27);
@@ -538,9 +668,12 @@
             // 
             // C12
             // 
+            this.C12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C12.Location = new System.Drawing.Point(556, 97);
+            this.C12.Location = new System.Drawing.Point(581, 126);
+            this.C12.MaximumSize = new System.Drawing.Size(54, 27);
             this.C12.MaxLength = 4;
+            this.C12.MinimumSize = new System.Drawing.Size(54, 27);
             this.C12.Name = "C12";
             this.C12.ReadOnly = true;
             this.C12.Size = new System.Drawing.Size(54, 27);
@@ -549,9 +682,12 @@
             // 
             // C14
             // 
+            this.C14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C14.Location = new System.Drawing.Point(676, 97);
+            this.C14.Location = new System.Drawing.Point(701, 126);
+            this.C14.MaximumSize = new System.Drawing.Size(54, 27);
             this.C14.MaxLength = 4;
+            this.C14.MinimumSize = new System.Drawing.Size(54, 27);
             this.C14.Name = "C14";
             this.C14.ReadOnly = true;
             this.C14.Size = new System.Drawing.Size(54, 27);
@@ -560,9 +696,12 @@
             // 
             // C13
             // 
+            this.C13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C13.Location = new System.Drawing.Point(616, 97);
+            this.C13.Location = new System.Drawing.Point(641, 126);
+            this.C13.MaximumSize = new System.Drawing.Size(54, 27);
             this.C13.MaxLength = 4;
+            this.C13.MinimumSize = new System.Drawing.Size(54, 27);
             this.C13.Name = "C13";
             this.C13.ReadOnly = true;
             this.C13.Size = new System.Drawing.Size(54, 27);
@@ -571,9 +710,12 @@
             // 
             // C24
             // 
+            this.C24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C24.Location = new System.Drawing.Point(676, 130);
+            this.C24.Location = new System.Drawing.Point(701, 159);
+            this.C24.MaximumSize = new System.Drawing.Size(54, 27);
             this.C24.MaxLength = 4;
+            this.C24.MinimumSize = new System.Drawing.Size(54, 27);
             this.C24.Name = "C24";
             this.C24.ReadOnly = true;
             this.C24.Size = new System.Drawing.Size(54, 27);
@@ -582,9 +724,12 @@
             // 
             // C23
             // 
+            this.C23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C23.Location = new System.Drawing.Point(616, 130);
+            this.C23.Location = new System.Drawing.Point(641, 159);
+            this.C23.MaximumSize = new System.Drawing.Size(54, 27);
             this.C23.MaxLength = 4;
+            this.C23.MinimumSize = new System.Drawing.Size(54, 27);
             this.C23.Name = "C23";
             this.C23.ReadOnly = true;
             this.C23.Size = new System.Drawing.Size(54, 27);
@@ -593,9 +738,12 @@
             // 
             // C22
             // 
+            this.C22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C22.Location = new System.Drawing.Point(556, 130);
+            this.C22.Location = new System.Drawing.Point(581, 159);
+            this.C22.MaximumSize = new System.Drawing.Size(54, 27);
             this.C22.MaxLength = 4;
+            this.C22.MinimumSize = new System.Drawing.Size(54, 27);
             this.C22.Name = "C22";
             this.C22.ReadOnly = true;
             this.C22.Size = new System.Drawing.Size(54, 27);
@@ -604,9 +752,12 @@
             // 
             // C21
             // 
+            this.C21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C21.Location = new System.Drawing.Point(496, 130);
+            this.C21.Location = new System.Drawing.Point(521, 159);
+            this.C21.MaximumSize = new System.Drawing.Size(54, 27);
             this.C21.MaxLength = 4;
+            this.C21.MinimumSize = new System.Drawing.Size(54, 27);
             this.C21.Name = "C21";
             this.C21.ReadOnly = true;
             this.C21.Size = new System.Drawing.Size(54, 27);
@@ -615,9 +766,12 @@
             // 
             // C34
             // 
+            this.C34.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C34.Location = new System.Drawing.Point(676, 163);
+            this.C34.Location = new System.Drawing.Point(701, 192);
+            this.C34.MaximumSize = new System.Drawing.Size(54, 27);
             this.C34.MaxLength = 4;
+            this.C34.MinimumSize = new System.Drawing.Size(54, 27);
             this.C34.Name = "C34";
             this.C34.ReadOnly = true;
             this.C34.Size = new System.Drawing.Size(54, 27);
@@ -626,9 +780,12 @@
             // 
             // C33
             // 
+            this.C33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C33.Location = new System.Drawing.Point(616, 163);
+            this.C33.Location = new System.Drawing.Point(641, 192);
+            this.C33.MaximumSize = new System.Drawing.Size(54, 27);
             this.C33.MaxLength = 4;
+            this.C33.MinimumSize = new System.Drawing.Size(54, 27);
             this.C33.Name = "C33";
             this.C33.ReadOnly = true;
             this.C33.Size = new System.Drawing.Size(54, 27);
@@ -637,9 +794,12 @@
             // 
             // C32
             // 
+            this.C32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C32.Location = new System.Drawing.Point(556, 163);
+            this.C32.Location = new System.Drawing.Point(581, 192);
+            this.C32.MaximumSize = new System.Drawing.Size(54, 27);
             this.C32.MaxLength = 4;
+            this.C32.MinimumSize = new System.Drawing.Size(54, 27);
             this.C32.Name = "C32";
             this.C32.ReadOnly = true;
             this.C32.Size = new System.Drawing.Size(54, 27);
@@ -648,9 +808,12 @@
             // 
             // C31
             // 
+            this.C31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C31.Location = new System.Drawing.Point(496, 163);
+            this.C31.Location = new System.Drawing.Point(521, 192);
+            this.C31.MaximumSize = new System.Drawing.Size(54, 27);
             this.C31.MaxLength = 4;
+            this.C31.MinimumSize = new System.Drawing.Size(54, 27);
             this.C31.Name = "C31";
             this.C31.ReadOnly = true;
             this.C31.Size = new System.Drawing.Size(54, 27);
@@ -659,9 +822,12 @@
             // 
             // C44
             // 
+            this.C44.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C44.Location = new System.Drawing.Point(676, 196);
+            this.C44.Location = new System.Drawing.Point(701, 225);
+            this.C44.MaximumSize = new System.Drawing.Size(54, 27);
             this.C44.MaxLength = 4;
+            this.C44.MinimumSize = new System.Drawing.Size(54, 27);
             this.C44.Name = "C44";
             this.C44.ReadOnly = true;
             this.C44.Size = new System.Drawing.Size(54, 27);
@@ -670,9 +836,12 @@
             // 
             // C43
             // 
+            this.C43.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C43.Location = new System.Drawing.Point(616, 196);
+            this.C43.Location = new System.Drawing.Point(641, 225);
+            this.C43.MaximumSize = new System.Drawing.Size(54, 27);
             this.C43.MaxLength = 4;
+            this.C43.MinimumSize = new System.Drawing.Size(54, 27);
             this.C43.Name = "C43";
             this.C43.ReadOnly = true;
             this.C43.Size = new System.Drawing.Size(54, 27);
@@ -681,9 +850,12 @@
             // 
             // C42
             // 
+            this.C42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C42.Location = new System.Drawing.Point(556, 196);
+            this.C42.Location = new System.Drawing.Point(581, 225);
+            this.C42.MaximumSize = new System.Drawing.Size(54, 27);
             this.C42.MaxLength = 4;
+            this.C42.MinimumSize = new System.Drawing.Size(54, 27);
             this.C42.Name = "C42";
             this.C42.ReadOnly = true;
             this.C42.Size = new System.Drawing.Size(54, 27);
@@ -692,9 +864,12 @@
             // 
             // C41
             // 
+            this.C41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.C41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.C41.Location = new System.Drawing.Point(496, 196);
+            this.C41.Location = new System.Drawing.Point(521, 225);
+            this.C41.MaximumSize = new System.Drawing.Size(54, 27);
             this.C41.MaxLength = 4;
+            this.C41.MinimumSize = new System.Drawing.Size(54, 27);
             this.C41.Name = "C41";
             this.C41.ReadOnly = true;
             this.C41.Size = new System.Drawing.Size(54, 27);
@@ -703,8 +878,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 235);
+            this.label1.Location = new System.Drawing.Point(100, 264);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 58;
@@ -712,8 +888,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(294, 235);
+            this.label2.Location = new System.Drawing.Point(319, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 59;
@@ -721,6 +898,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -738,7 +916,9 @@
             "Kofaktör A",
             "Adjoint A",
             "Adjoint B"});
-            this.comboBox1.Location = new System.Drawing.Point(496, 300);
+            this.comboBox1.Location = new System.Drawing.Point(521, 328);
+            this.comboBox1.MaximumSize = new System.Drawing.Size(114, 0);
+            this.comboBox1.MinimumSize = new System.Drawing.Size(114, 0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(114, 28);
             this.comboBox1.TabIndex = 60;
@@ -746,7 +926,10 @@
             // 
             // calculator
             // 
-            this.calculator.Location = new System.Drawing.Point(616, 299);
+            this.calculator.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.calculator.Location = new System.Drawing.Point(641, 328);
+            this.calculator.MaximumSize = new System.Drawing.Size(114, 29);
+            this.calculator.MinimumSize = new System.Drawing.Size(114, 29);
             this.calculator.Name = "calculator";
             this.calculator.Size = new System.Drawing.Size(114, 29);
             this.calculator.TabIndex = 61;
@@ -756,6 +939,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
@@ -763,15 +947,18 @@
             "2",
             "3",
             "4"});
-            this.comboBox2.Location = new System.Drawing.Point(556, 336);
+            this.comboBox2.Location = new System.Drawing.Point(581, 365);
+            this.comboBox2.MaximumSize = new System.Drawing.Size(54, 0);
+            this.comboBox2.MinimumSize = new System.Drawing.Size(54, 0);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(54, 28);
             this.comboBox2.TabIndex = 62;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(508, 339);
+            this.label3.Location = new System.Drawing.Point(533, 368);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 63;
@@ -779,8 +966,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(621, 339);
+            this.label4.Location = new System.Drawing.Point(646, 368);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 65;
@@ -788,6 +976,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
@@ -795,15 +984,18 @@
             "2",
             "3",
             "4"});
-            this.comboBox3.Location = new System.Drawing.Point(676, 336);
+            this.comboBox3.Location = new System.Drawing.Point(701, 365);
+            this.comboBox3.MaximumSize = new System.Drawing.Size(54, 0);
+            this.comboBox3.MinimumSize = new System.Drawing.Size(54, 0);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(54, 28);
             this.comboBox3.TabIndex = 64;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(583, 256);
+            this.label5.Location = new System.Drawing.Point(608, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 67;
@@ -813,7 +1005,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 400);
+            this.ClientSize = new System.Drawing.Size(822, 453);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label3);
@@ -881,6 +1073,10 @@
             this.Controls.Add(this.colA);
             this.Controls.Add(this.rowA);
             this.Controls.Add(this.label4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(840, 500);
+            this.MinimumSize = new System.Drawing.Size(840, 500);
             this.Name = "Form1";
             this.Text = "Matris Hesap Makinesi";
             this.Load += new System.EventHandler(this.Form1_Load);
