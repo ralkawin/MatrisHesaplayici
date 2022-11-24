@@ -141,8 +141,8 @@ namespace MatrisHesap
                 if (C22.Visible == true){C22.Text = matrixC[1, 1].ToString();}
                 if (C23.Visible == true){C23.Text = matrixC[1, 2].ToString();}
                 if (C24.Visible == true){C24.Text = matrixC[1, 3].ToString();}
-                if (C32.Visible == true){C32.Text = matrixC[2, 0].ToString();}
-                if (C31.Visible == true){C31.Text = matrixC[2, 1].ToString();}
+                if (C31.Visible == true){C31.Text = matrixC[2, 0].ToString();}
+                if (C32.Visible == true){C32.Text = matrixC[2, 1].ToString();}
                 if (C33.Visible == true){C33.Text = matrixC[2, 2].ToString();}
                 if (C34.Visible == true){C34.Text = matrixC[2, 3].ToString();}
                 if (C41.Visible == true){C41.Text = matrixC[3, 0].ToString();}
@@ -253,6 +253,7 @@ namespace MatrisHesap
         private void setA_Click(object sender, EventArgs e)
         {
             matrixSetter(0);
+            detA.Text = determinant(0).ToString();
         }
         private void setB_Click(object sender, EventArgs e)
         {
@@ -458,9 +459,9 @@ namespace MatrisHesap
                 case -1:
                     MessageBox.Show("Lütfen bir iþlem seçiniz.");
                     break;
-                /*default:
+                default:
                     MessageBox.Show("Bu iþlem geliþtirme aþamasýndadýr.");
-                    break;*/
+                    break;
             }
         }
 
@@ -580,7 +581,7 @@ namespace MatrisHesap
         public int[,] minor(int matName, int row, int col)
         {
             int[,] minorMatrix = new int[2,2];
-            
+            //int minor;
             
             if(matName == 0 && isThereNumber(0) == true)
             {
@@ -589,10 +590,9 @@ namespace MatrisHesap
 
                 for (int i = 0; i < rowA.Value - 1; i++)
                 {
-                    
+                    if (i < row - 1) { k = i; } else { k = i + 1; }
                     for (int j = 0; j < colA.Value - 1; j++)
                     {
-                        if (i < row - 1) { k = i; } else { k = i + 1; }
                         if (j < col - 1) { l = j; } else { l = j + 1; }
                         minorMatrix[i, j] = matrixA[k, l];
                     }
@@ -617,9 +617,65 @@ namespace MatrisHesap
             }
             return minorMatrix;
         }
-        public int determinant(int matName, int row, int col)
+        public int determinant(int matName)
         {
-            return 0;
+            int[,] detMatrix = new int[2,2];
+            int[,] sarrusMatrix;
+            int detValue=0, detRow=0, detCol=0, sarrusRow, sarrusCol;
+            if (matName == 0) 
+            {
+                detRow = rowA.Value;
+                detCol = colA.Value;
+                detMatrix = new int[rowA.Value, colA.Value];
+                detMatrix = matrixA;
+            }
+
+            if (matName == 1)
+            {
+                detRow = rowB.Value;
+                detCol = colB.Value;
+                detMatrix = new int[rowB.Value, colB.Value];
+                detMatrix = matrixB;
+            }
+
+            if (matName == 2)
+            {
+                detRow = rowC;
+                detCol = colC;
+                detMatrix = new int[rowC, colC];
+                detMatrix = matrixC;
+            }
+
+            if (detRow == 1 && detCol == 1) { detValue = detMatrix[0, 0]; }
+
+            else if (detRow == 2 && detCol == 2) { detValue = detMatrix[0, 0] * detMatrix[1, 1] - detMatrix[0, 1] * detMatrix[1, 0]; }
+            
+            else if (detRow == 3 && detCol == 3)
+            {
+                sarrusRow = detRow + 2;
+                sarrusCol = detCol;
+                sarrusMatrix = new int[sarrusRow, sarrusCol];
+
+                for (int i=0; i < 5; i++)
+                {
+                    for (int j=0; j < 3; j++)
+                    {
+                        if (i < 3) { sarrusMatrix[i, j] = detMatrix[i, j]; }
+                        else { sarrusMatrix[i, j] = detMatrix[i - 3, j]; }
+                    }
+                }
+
+                detValue = (sarrusMatrix[0, 2] * sarrusMatrix[1, 1] * sarrusMatrix[2, 0]
+                           + sarrusMatrix[1, 2] * sarrusMatrix[2, 1] * sarrusMatrix[3, 0]
+                           + sarrusMatrix[2, 2] * sarrusMatrix[3, 1] * sarrusMatrix[4, 0]) 
+                           -(sarrusMatrix[0, 0] * sarrusMatrix[1, 1] * sarrusMatrix[2, 2]
+                           + sarrusMatrix[1, 0] * sarrusMatrix[2, 1] * sarrusMatrix[3, 2]
+                           + sarrusMatrix[2, 0] * sarrusMatrix[3, 1] * sarrusMatrix[4, 2]);
+            }
+
+            else { MessageBox.Show("Kare olmayan ve 3x3'ten büyük matrisler için determinant hesabý geliþtirme aþamasýndadýr."); }
+
+            return detValue;
         }
 
         private void colB_Scroll(object sender, EventArgs e)
