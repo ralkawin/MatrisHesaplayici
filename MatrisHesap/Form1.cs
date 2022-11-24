@@ -263,10 +263,6 @@ namespace MatrisHesap
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label3.Visible = false;
-            label4.Visible = false;
-            comboBox2.Visible = false;
-            comboBox3.Visible = false;
             matrixSizer(0);
             matrixSizer(1);
             matrixSizer(2);
@@ -274,21 +270,6 @@ namespace MatrisHesap
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 8 || comboBox1.SelectedIndex == 9 || comboBox1.SelectedIndex==10 || comboBox1.SelectedIndex == 11)
-            {
-                label3.Visible = true;
-                label4.Visible = true;
-                comboBox2.Visible = true;
-                comboBox3.Visible = true;
-            } 
-            else 
-            {
-                label3.Visible = false;
-                label4.Visible = false;
-                comboBox2.Visible = false;
-                comboBox3.Visible = false;
-            }
-
             if (rowA.Value == rowB.Value && colA.Value == colB.Value && (comboBox1.SelectedIndex==2 || comboBox1.SelectedIndex == 3))
             {
                 rowC = rowA.Value;
@@ -470,6 +451,23 @@ namespace MatrisHesap
                     }
                     else { MessageBox.Show("Matriste hata var, lütfen kontrol edip tekrar deneyin. \n\t-Matris tam dolu ve tam sayýlar içermelidir.\n\t-Matris kare matris olmalý."); }
                     break;
+                case 4:
+                    matrixSetter(0);
+                    rowC = colA.Value;
+                    colC = rowA.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixC = transpose(matrixA, rowA.Value, colA.Value);
+                    matrixSizer(2);
+                    matrixSetter(2);
+                    break;
+                case 5:
+                    MatrixSetter(1);
+                    rowC = colB.Value;
+                    colC = rowB.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixC = transpose(matrixB, rowB.Value, colB.Value);
+                    matrixSizer(2);
+                    matrixSetter(2);
                 case -1:
                     MessageBox.Show("Lütfen bir iþlem seçiniz.");
                     break;
@@ -720,6 +718,21 @@ namespace MatrisHesap
                 MessageBox.Show("Kare olmayan matrisler için determinant hesabý yapýlamaz.");
                 return 0;
             }
+        }
+
+        public int[,] transpose(int[,] matName, int row, int col)
+        {
+            int[,] transMatrix = new int[col, row];
+            
+            for (int i=0; i<row; i++)
+            {
+                for (int j=0; j<col; j++)
+                {
+                    transMatrix[j, i] = matName[i, j];
+                }
+            }
+
+            return transMatrix;
         }
 
         private void colB_Scroll(object sender, EventArgs e)

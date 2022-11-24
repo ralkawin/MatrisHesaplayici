@@ -91,10 +91,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.calculator = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.detC = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.detA = new System.Windows.Forms.Label();
@@ -960,60 +956,6 @@
             this.calculator.UseVisualStyleBackColor = true;
             this.calculator.Click += new System.EventHandler(this.calculator_Click);
             // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBox2.Location = new System.Drawing.Point(584, 335);
-            this.comboBox2.MaximumSize = new System.Drawing.Size(54, 0);
-            this.comboBox2.MinimumSize = new System.Drawing.Size(54, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(54, 28);
-            this.comboBox2.TabIndex = 62;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(536, 338);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 20);
-            this.label3.TabIndex = 63;
-            this.label3.Text = "Satır:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(649, 338);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 20);
-            this.label4.TabIndex = 65;
-            this.label4.Text = "Sütun:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.comboBox3.Location = new System.Drawing.Point(704, 335);
-            this.comboBox3.MaximumSize = new System.Drawing.Size(54, 0);
-            this.comboBox3.MinimumSize = new System.Drawing.Size(54, 0);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(54, 28);
-            this.comboBox3.TabIndex = 64;
-            // 
             // detC
             // 
             this.detC.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1080,9 +1022,6 @@
             this.Controls.Add(this.detA);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.detC);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.calculator);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -1145,7 +1084,6 @@
             this.Controls.Add(this.A11);
             this.Controls.Add(this.colA);
             this.Controls.Add(this.rowA);
-            this.Controls.Add(this.label4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(840, 500);
@@ -1226,10 +1164,6 @@
         private Label label2;
         private ComboBox comboBox1;
         private Button calculator;
-        private ComboBox comboBox2;
-        private Label label3;
-        private Label label4;
-        private ComboBox comboBox3;
         private Label label6;
         private Label detA;
         private Label label7;
