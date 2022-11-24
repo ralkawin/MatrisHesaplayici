@@ -19,6 +19,7 @@ namespace MatrisHesap
         {
             decimal numberA = 0;
             decimal numberB = 0;
+            decimal numberC = 0;
             bool isThere = true;
 
             if (matName == 0)
@@ -31,8 +32,8 @@ namespace MatrisHesap
                 if (A22.Visible == true && ((A22.Text.Trim() == string.Empty) || !decimal.TryParse(A22.Text, out numberA))) { isThere = false; }
                 if (A23.Visible == true && ((A23.Text.Trim() == string.Empty) || !decimal.TryParse(A23.Text, out numberA))) { isThere = false; }
                 if (A24.Visible == true && ((A24.Text.Trim() == string.Empty) || !decimal.TryParse(A24.Text, out numberA))) { isThere = false; }
-                if (A32.Visible == true && ((A32.Text.Trim() == string.Empty) || !decimal.TryParse(A32.Text, out numberA))) { isThere = false; }
                 if (A31.Visible == true && ((A31.Text.Trim() == string.Empty) || !decimal.TryParse(A31.Text, out numberA))) { isThere = false; }
+                if (A32.Visible == true && ((A32.Text.Trim() == string.Empty) || !decimal.TryParse(A32.Text, out numberA))) { isThere = false; }
                 if (A33.Visible == true && ((A33.Text.Trim() == string.Empty) || !decimal.TryParse(A33.Text, out numberA))) { isThere = false; }
                 if (A34.Visible == true && ((A34.Text.Trim() == string.Empty) || !decimal.TryParse(A34.Text, out numberA))) { isThere = false; }
                 if (A41.Visible == true && ((A41.Text.Trim() == string.Empty) || !decimal.TryParse(A41.Text, out numberA))) { isThere = false; }
@@ -51,14 +52,34 @@ namespace MatrisHesap
                 if (B22.Visible == true && ((B22.Text.Trim() == string.Empty) || !decimal.TryParse(B22.Text, out numberB))) { isThere = false; }
                 if (B23.Visible == true && ((B23.Text.Trim() == string.Empty) || !decimal.TryParse(B23.Text, out numberB))) { isThere = false; }
                 if (B24.Visible == true && ((B24.Text.Trim() == string.Empty) || !decimal.TryParse(B24.Text, out numberB))) { isThere = false; }
-                if (B32.Visible == true && ((B32.Text.Trim() == string.Empty) || !decimal.TryParse(B32.Text, out numberB))) { isThere = false; }
                 if (B31.Visible == true && ((B31.Text.Trim() == string.Empty) || !decimal.TryParse(B31.Text, out numberB))) { isThere = false; }
+                if (B32.Visible == true && ((B32.Text.Trim() == string.Empty) || !decimal.TryParse(B32.Text, out numberB))) { isThere = false; }
                 if (B33.Visible == true && ((B33.Text.Trim() == string.Empty) || !decimal.TryParse(B33.Text, out numberB))) { isThere = false; }
                 if (B34.Visible == true && ((B34.Text.Trim() == string.Empty) || !decimal.TryParse(B34.Text, out numberB))) { isThere = false; }
                 if (B41.Visible == true && ((B41.Text.Trim() == string.Empty) || !decimal.TryParse(B41.Text, out numberB))) { isThere = false; }
                 if (B42.Visible == true && ((B42.Text.Trim() == string.Empty) || !decimal.TryParse(B42.Text, out numberB))) { isThere = false; }
                 if (B43.Visible == true && ((B43.Text.Trim() == string.Empty) || !decimal.TryParse(B43.Text, out numberB))) { isThere = false; }
                 if (B44.Visible == true && ((B44.Text.Trim() == string.Empty) || !decimal.TryParse(B44.Text, out numberB))) { isThere = false; }
+            }
+
+            if (matName == 2)
+            {
+                if (C11.Visible == true && ((C11.Text.Trim() == string.Empty) || !decimal.TryParse(C11.Text, out numberC))) { isThere = false; }
+                if (C12.Visible == true && ((C12.Text.Trim() == string.Empty) || !decimal.TryParse(C12.Text, out numberC))) { isThere = false; }
+                if (C13.Visible == true && ((C13.Text.Trim() == string.Empty) || !decimal.TryParse(C13.Text, out numberC))) { isThere = false; }
+                if (C14.Visible == true && ((C14.Text.Trim() == string.Empty) || !decimal.TryParse(C14.Text, out numberC))) { isThere = false; }
+                if (C21.Visible == true && ((C21.Text.Trim() == string.Empty) || !decimal.TryParse(C21.Text, out numberC))) { isThere = false; }
+                if (C22.Visible == true && ((C22.Text.Trim() == string.Empty) || !decimal.TryParse(C22.Text, out numberC))) { isThere = false; }
+                if (C23.Visible == true && ((C23.Text.Trim() == string.Empty) || !decimal.TryParse(C23.Text, out numberC))) { isThere = false; }
+                if (C24.Visible == true && ((C24.Text.Trim() == string.Empty) || !decimal.TryParse(C24.Text, out numberC))) { isThere = false; }
+                if (C31.Visible == true && ((C31.Text.Trim() == string.Empty) || !decimal.TryParse(C31.Text, out numberC))) { isThere = false; }
+                if (C32.Visible == true && ((C32.Text.Trim() == string.Empty) || !decimal.TryParse(C32.Text, out numberC))) { isThere = false; }
+                if (C33.Visible == true && ((C33.Text.Trim() == string.Empty) || !decimal.TryParse(C33.Text, out numberC))) { isThere = false; }
+                if (C34.Visible == true && ((C34.Text.Trim() == string.Empty) || !decimal.TryParse(C34.Text, out numberC))) { isThere = false; }
+                if (C41.Visible == true && ((C41.Text.Trim() == string.Empty) || !decimal.TryParse(C41.Text, out numberC))) { isThere = false; }
+                if (C42.Visible == true && ((C42.Text.Trim() == string.Empty) || !decimal.TryParse(C42.Text, out numberC))) { isThere = false; }
+                if (C43.Visible == true && ((C43.Text.Trim() == string.Empty) || !decimal.TryParse(C43.Text, out numberC))) { isThere = false; }
+                if (C44.Visible == true && ((C44.Text.Trim() == string.Empty) || !decimal.TryParse(C44.Text, out numberC))) { isThere = false; }
             }
 
             return isThere;
@@ -81,8 +102,8 @@ namespace MatrisHesap
                         if (A22.Visible == true) { matrixA[1, 1] = int.Parse(A22.Text); }
                         if (A23.Visible == true) { matrixA[1, 2] = int.Parse(A23.Text); }
                         if (A24.Visible == true) { matrixA[1, 3] = int.Parse(A24.Text); }
-                        if (A32.Visible == true) { matrixA[2, 1] = int.Parse(A32.Text); }
                         if (A31.Visible == true) { matrixA[2, 0] = int.Parse(A31.Text); }
+                        if (A32.Visible == true) { matrixA[2, 1] = int.Parse(A32.Text); }
                         if (A33.Visible == true) { matrixA[2, 2] = int.Parse(A33.Text); }
                         if (A34.Visible == true) { matrixA[2, 3] = int.Parse(A34.Text); }
                         if (A41.Visible == true) { matrixA[3, 0] = int.Parse(A41.Text); }
@@ -114,8 +135,8 @@ namespace MatrisHesap
                         if (B22.Visible == true) { matrixB[1, 1] = int.Parse(B22.Text); }
                         if (B23.Visible == true) { matrixB[1, 2] = int.Parse(B23.Text); }
                         if (B24.Visible == true) { matrixB[1, 3] = int.Parse(B24.Text); }
-                        if (B32.Visible == true) { matrixB[2, 1] = int.Parse(B32.Text); }
                         if (B31.Visible == true) { matrixB[2, 0] = int.Parse(B31.Text); }
+                        if (B32.Visible == true) { matrixB[2, 1] = int.Parse(B32.Text); }
                         if (B33.Visible == true) { matrixB[2, 2] = int.Parse(B33.Text); }
                         if (B34.Visible == true) { matrixB[2, 3] = int.Parse(B34.Text); }
                         if (B41.Visible == true) { matrixB[3, 0] = int.Parse(B41.Text); }
@@ -149,6 +170,27 @@ namespace MatrisHesap
                 if (C42.Visible == true){C42.Text = matrixC[3, 1].ToString();}
                 if (C43.Visible == true){C43.Text = matrixC[3, 2].ToString();}
                 if (C44.Visible == true){C44.Text = matrixC[3, 3].ToString();}
+            }
+            if (matName == 3)
+            {
+                matrixC = new int[rowC, colC];
+
+                if (C11.Visible == true) { matrixC[0, 0] = int.Parse(C11.Text); }
+                if (C12.Visible == true) { matrixC[0, 1] = int.Parse(C12.Text); }
+                if (C13.Visible == true) { matrixC[0, 2] = int.Parse(C13.Text); }
+                if (C14.Visible == true) { matrixC[0, 3] = int.Parse(C14.Text); }
+                if (C21.Visible == true) { matrixC[1, 0] = int.Parse(C21.Text); }
+                if (C22.Visible == true) { matrixC[1, 1] = int.Parse(C22.Text); }
+                if (C23.Visible == true) { matrixC[1, 2] = int.Parse(C23.Text); }
+                if (C24.Visible == true) { matrixC[1, 3] = int.Parse(C24.Text); }
+                if (C31.Visible == true) { matrixC[2, 0] = int.Parse(C31.Text); }
+                if (C32.Visible == true) { matrixC[2, 1] = int.Parse(C32.Text); }
+                if (C33.Visible == true) { matrixC[2, 2] = int.Parse(C33.Text); }
+                if (C34.Visible == true) { matrixC[2, 3] = int.Parse(C34.Text); }
+                if (C41.Visible == true) { matrixC[3, 0] = int.Parse(C41.Text); }
+                if (C42.Visible == true) { matrixC[3, 1] = int.Parse(C42.Text); }
+                if (C43.Visible == true) { matrixC[3, 2] = int.Parse(C43.Text); }
+                if (C44.Visible == true) { matrixC[3, 3] = int.Parse(C44.Text); }
             }
         }
         public void matrixSizer(short matName)
@@ -252,13 +294,19 @@ namespace MatrisHesap
 
         private void setA_Click(object sender, EventArgs e)
         {
+            int determA = 0;
+            matrixSizer(0);
             matrixSetter(0);
-            if(isThereNumber(0) && rowA.Value == colA.Value) { detA.Text = determinant(matrixA, rowA.Value, colA.Value).ToString(); }
+            if (isThereNumber(0) && rowA.Value == colA.Value) { determA = determinant(matrixA, rowA.Value, colA.Value); }
+            detA.Text = determA.ToString();
         }
         private void setB_Click(object sender, EventArgs e)
         {
+            int determB = 0;
+            matrixSizer(1);
             matrixSetter(1);
-            if (isThereNumber(1) && rowB.Value == colB.Value) { detB.Text = determinant(matrixB, rowA.Value, colA.Value).ToString(); }
+            if (isThereNumber(1) && rowB.Value == colB.Value) { determB = determinant(matrixB, rowB.Value, colB.Value); }
+            detB.Text = determB.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -321,8 +369,6 @@ namespace MatrisHesap
                         }
 
                         matrixSetter(2);
-
-                        if (rowC == colC) { detC.Text = determinant(matrixC, rowC, colC).ToString(); }
                     }
                     else
                     {
@@ -487,6 +533,26 @@ namespace MatrisHesap
                     matrixSizer(2);
                     matrixSetter(2);
                     break;
+                case 12:
+                    matrixSetter(0);
+                    rowC = rowA.Value;
+                    colC = colA.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixC = cofactor(0, rowA.Value, colA.Value);
+                    matrixC = transpose(matrixC, rowC, colC);
+                    matrixSizer(2);
+                    matrixSetter(2);
+                    break;
+                case 13:
+                    matrixSetter(1);
+                    rowC = rowA.Value;
+                    colC = colA.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixC = cofactor(0, rowB.Value, colB.Value);
+                    matrixC = transpose(matrixC, rowC, colC);
+                    matrixSizer(2);
+                    matrixSetter(2);
+                    break;
                 case -1:
                     MessageBox.Show("Lütfen bir iþlem seçiniz.");
                     break;
@@ -494,11 +560,10 @@ namespace MatrisHesap
                     MessageBox.Show("Bu iþlem geliþtirme aþamasýndadýr.");
                     break;
             }
-
-            if (rowC == colC)
-            {
-                detC.Text = determinant(matrixC, rowC, colC).ToString();
-            }
+            matrixSizer(2);
+            matrixSetter(2);
+            matrixSetter(3);
+            detC.Text = determinant(matrixC, rowC, colC).ToString();
         }
 
         private void rowA_Scroll(object sender, EventArgs e)
@@ -526,8 +591,8 @@ namespace MatrisHesap
             A22.Clear();
             A23.Clear();
             A24.Clear();
-            A32.Clear();
             A31.Clear();
+            A32.Clear();
             A33.Clear();
             A34.Clear();
             A41.Clear();
@@ -546,8 +611,8 @@ namespace MatrisHesap
             B22.Clear();
             B23.Clear();
             B24.Clear();
-            B32.Clear();
             B31.Clear();
+            B32.Clear();
             B33.Clear();
             B34.Clear();
             B41.Clear();
@@ -568,8 +633,8 @@ namespace MatrisHesap
                 if (A22.Visible == true) { A22.Text = "1"; }
                 if (A23.Visible == true) { A23.Text = "0"; }
                 if (A24.Visible == true) { A24.Text = "0"; }
-                if (A32.Visible == true) { A32.Text = "0"; }
                 if (A31.Visible == true) { A31.Text = "0"; }
+                if (A32.Visible == true) { A32.Text = "0"; }
                 if (A33.Visible == true) { A33.Text = "1"; }
                 if (A34.Visible == true) { A34.Text = "0"; }
                 if (A41.Visible == true) { A41.Text = "0"; }
@@ -597,8 +662,8 @@ namespace MatrisHesap
                 if (B22.Visible == true) { B22.Text = "1"; }
                 if (B23.Visible == true) { B23.Text = "0"; }
                 if (B24.Visible == true) { B24.Text = "0"; }
-                if (B32.Visible == true) { B32.Text = "0"; }
                 if (B31.Visible == true) { B31.Text = "0"; }
+                if (B32.Visible == true) { B32.Text = "0"; }
                 if (B33.Visible == true) { B33.Text = "1"; }
                 if (B34.Visible == true) { B34.Text = "0"; }
                 if (B41.Visible == true) { B41.Text = "0"; }
@@ -616,7 +681,7 @@ namespace MatrisHesap
 
         public int minor(int matName, int row, int col)
         {
-            int[,] minorMatrix = new int[2,2];
+            int[,] minorMatrix;
             int minor=0;
             
             if(matName == 0 && isThereNumber(0) == true)
@@ -637,60 +702,83 @@ namespace MatrisHesap
             }
             
 
-            if (matName == 1 && isThereNumber(1) == true)
+            else if (matName == 1 && isThereNumber(1) == true)
             {
                 minorMatrix = new int[rowB.Value - 1, colB.Value - 1];
                 int k = 0, l = 0;
 
                 for (int i = 0; i < rowB.Value - 1; i++)
                 {
-                    if (i < row - 1) { k = i; } else { k = i + 1; }
+                    if (i < row) { k = i; } else { k = i + 1; }
                     for (int j = 0; j < colB.Value - 1; j++)
                     {
-                        if (j < col - 1) { l = j; } else { l = j + 1; }
+                        if (j < col) { l = j; } else { l = j + 1; }
                         minorMatrix[i, j] = matrixB[k, l];
                     }
                 }
                 minor = determinant(minorMatrix, rowB.Value - 1, colB.Value - 1);
             }
-            
+
+            else if (matName == 2 && isThereNumber(2) == true)
+            {
+                matrixSetter(2);
+                minorMatrix = new int[rowC - 1, colC - 1];
+                int k = 0, l = 0;
+
+                for (int i = 0; i < rowC - 1; i++)
+                {
+                    if (i < row) { k = i; } else { k = i + 1; }
+                    for (int j = 0; j < colC - 1; j++)
+                    {
+                        if (j < col) { l = j; } else { l = j + 1; }
+                        minorMatrix[i, j] = matrixC[k, l];
+                    }
+                }
+                minor = determinant(minorMatrix, rowC - 1, colC - 1);
+            }
+
             return minor;
         }
         public int determinant(int[,] matName, int detOrow, int detOcol)
         {
-            int detValue = 0, detRow = 0, detCol = 0, sarrusRow, sarrusCol;
-            detRow = detOrow;
-            detCol = detOcol;
+            int detValue = 0, detRow = detOrow, detCol = detOcol, sarrusRow=0, sarrusCol=0;
             int[,] detMatrix = new int[detRow, detCol];
             int[,] sarrusMatrix;
-            
+            int matVal=0;
 
-            
-            
-            if (matName == matrixA) 
+            if (matName == matrixA || matName == matrixB ||matName == matrixC)
             {
-                detRow = rowA.Value;
-                detCol = colA.Value;
-                detMatrix = new int[rowA.Value, colA.Value];
-                detMatrix = matrixA;
+                if (matName == matrixA)
+                {
+                    matrixSizer(0);
+                    matrixSetter(0);
+                    detRow = rowA.Value;
+                    detCol = colA.Value;
+                    detMatrix = new int[rowA.Value, colA.Value];
+                    detMatrix = matrixA;
+                    matVal = 0;
+                }
+                if (matName == matrixB)
+                {
+                    matrixSizer(1);
+                    matrixSetter(1);
+                    detRow = rowB.Value;
+                    detCol = colB.Value;
+                    detMatrix = new int[rowB.Value, colB.Value];
+                    detMatrix = matrixB;
+                    matVal = 1;
+                }
+                if (matName == matrixC)
+                {
+                    matrixSizer(2);
+                    matrixSetter(2);
+                    detRow = rowC;
+                    detCol = colC;
+                    detMatrix = new int[rowC, colC];
+                    detMatrix = matrixC;
+                    matVal = 2;
+                }
             }
-
-            if (matName == matrixB)
-            {
-                detRow = rowB.Value;
-                detCol = colB.Value;
-                detMatrix = new int[rowB.Value, colB.Value];
-                detMatrix = matrixB;
-            }
-
-            if (matName == matrixC)
-            {
-                detRow = rowC;
-                detCol = colC;
-                detMatrix = new int[rowC, colC];
-                detMatrix = matrixC;
-            }
-
             else
             {
                 detRow = detOrow;
@@ -698,7 +786,7 @@ namespace MatrisHesap
                 detMatrix = new int[detOrow, detOcol];
                 detMatrix = matName;
             }
-
+            
             if (detRow == 1 && detCol == 1) { detValue = detMatrix[0, 0]; return detValue; }
 
             else if (detRow == 2 && detCol == 2) { detValue = detMatrix[0, 0] * detMatrix[1, 1] - detMatrix[0, 1] * detMatrix[1, 0]; return detValue; }
@@ -718,18 +806,24 @@ namespace MatrisHesap
                     }
                 }
 
-                detValue = (sarrusMatrix[0, 2] * sarrusMatrix[1, 1] * sarrusMatrix[2, 0]
+                detValue = -(sarrusMatrix[0, 2] * sarrusMatrix[1, 1] * sarrusMatrix[2, 0]
                            + sarrusMatrix[1, 2] * sarrusMatrix[2, 1] * sarrusMatrix[3, 0]
                            + sarrusMatrix[2, 2] * sarrusMatrix[3, 1] * sarrusMatrix[4, 0]) 
-                           -(sarrusMatrix[0, 0] * sarrusMatrix[1, 1] * sarrusMatrix[2, 2]
+                           +(sarrusMatrix[0, 0] * sarrusMatrix[1, 1] * sarrusMatrix[2, 2]
                            + sarrusMatrix[1, 0] * sarrusMatrix[2, 1] * sarrusMatrix[3, 2]
                            + sarrusMatrix[2, 0] * sarrusMatrix[3, 1] * sarrusMatrix[4, 2]);
                 return detValue;
             }
             else if (detRow == 4 && detCol == 4) 
-            { 
-                MessageBox.Show("Bu matris için determinant hesabý geliþtirme aþamasýndadýr.");
-                return 0;
+            {
+                int[,] cofMat = new int[detRow, detCol];
+                cofMat = cofactor(matVal, detRow, detCol);
+                detValue = 0;
+                for (int i=0; i<detCol; i++)
+                {   
+                    detValue += matName[1, i] * cofMat[1,i];
+                }
+                return detValue;
             }
 
             else 
