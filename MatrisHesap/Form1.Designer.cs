@@ -95,11 +95,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.detC = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.detA = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.detB = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.rowA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colB)).BeginInit();
@@ -1013,15 +1014,15 @@
             this.comboBox3.Size = new System.Drawing.Size(54, 28);
             this.comboBox3.TabIndex = 64;
             // 
-            // label5
+            // detC
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(611, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 67;
-            this.label5.Text = "label5";
+            this.detC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.detC.AutoSize = true;
+            this.detC.Location = new System.Drawing.Point(649, 253);
+            this.detC.Name = "detC";
+            this.detC.Size = new System.Drawing.Size(31, 20);
+            this.detC.TabIndex = 67;
+            this.detC.Text = "n/a";
             // 
             // label6
             // 
@@ -1059,16 +1060,26 @@
             this.detB.TabIndex = 71;
             this.detB.Text = "n/a";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(543, 253);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 20);
+            this.label8.TabIndex = 70;
+            this.label8.Text = "Determinant:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 453);
             this.Controls.Add(this.detB);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.detA);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.detC);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);
@@ -1219,10 +1230,11 @@
         private Label label3;
         private Label label4;
         private ComboBox comboBox3;
-        private Label label5;
         private Label label6;
         private Label detA;
         private Label label7;
         private Label detB;
+        private Label label8;
+        private Label detC;
     }
 }

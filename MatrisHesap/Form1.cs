@@ -253,11 +253,12 @@ namespace MatrisHesap
         private void setA_Click(object sender, EventArgs e)
         {
             matrixSetter(0);
-            detA.Text = determinant(0).ToString();
+            if(isThereNumber(0) && rowA.Value == colA.Value) { detA.Text = determinant(matrixA, rowA.Value, colA.Value).ToString(); }
         }
         private void setB_Click(object sender, EventArgs e)
         {
             matrixSetter(1);
+            if (isThereNumber(1) && rowB.Value == colB.Value) { detB.Text = determinant(matrixB, rowA.Value, colA.Value).ToString(); }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -339,6 +340,8 @@ namespace MatrisHesap
                         }
 
                         matrixSetter(2);
+
+                        if (rowC == colC) { detC.Text = determinant(matrixC, rowC, colC).ToString(); }
                     }
                     else
                     {
@@ -425,36 +428,47 @@ namespace MatrisHesap
                     else { MessageBox.Show("Çýkartma iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
                     break;
                 case 8:
-                    if (isThereNumber(0) == true) 
+                    if (isThereNumber(0) == true && rowA.Value == colA.Value) 
                     {
-                        if (comboBox2.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && rowA.Value >= comboBox2.SelectedIndex+1 && colA.Value >= comboBox3.SelectedIndex+1)
+                        matrixSetter(0);
+                        rowC = rowA.Value;
+                        colC = colA.Value;
+                        int[,] minorMatrixA = new int[rowA.Value, colA.Value];
+                        matrixC = new int[rowC, colC];
+                        matrixSizer(2);
+
+                        for (int i=0; i<rowA.Value; i++)
                         {
-                            matrixSetter(0);
-                            rowC = rowA.Value - 1;
-                            colC = colA.Value - 1;
-                            matrixC = new int[rowC, colC];
-                            matrixSizer(2);
-                            matrixC = minor(0, comboBox2.SelectedIndex+1, comboBox3.SelectedIndex+1);
-                            matrixSetter(2);
-                        } else { MessageBox.Show("Lütfen minör hesabý için satýr ve sütun seçimini matrise uygun olarak yapýnýz."); }
-                    } else { MessageBox.Show("Lütfen matrisi kontrol ediniz."); }
+                            for (int j=0; j<colA.Value; j++)
+                            {
+                                minorMatrixA[i, j] = minor(0, i, j);
+                            }
+                        }
+                        matrixC = minorMatrixA;
+                        matrixSetter(2);
+                    } else { MessageBox.Show("Matriste hata var, lütfen kontrol edip tekrar deneyin. \n\t-Matris tam dolu ve tam sayýlar içermelidir.\n\t-Matris kare matris olmalý."); }
                     break;
                 case 9:
-                    if (isThereNumber(1) == true)
+                    if (isThereNumber(1) == true && rowB.Value == colB.Value)
                     {
-                        if (comboBox2.SelectedIndex != -1 && comboBox3.SelectedIndex != -1 && rowB.Value >= comboBox2.SelectedIndex + 1 && colB.Value >= comboBox3.SelectedIndex + 1)
+                        matrixSetter(1);
+                        rowC = rowB.Value;
+                        colC = colB.Value;
+                        int[,] minorMatrixB = new int[rowB.Value, colB.Value];
+                        matrixC = new int[rowC, colC];
+                        matrixSizer(2);
+
+                        for (int i = 0; i < rowB.Value; i++)
                         {
-                            matrixSetter(1);
-                            rowC = rowB.Value - 1;
-                            colC = colB.Value - 1;
-                            matrixC = new int[rowC, colC];
-                            matrixSizer(2);
-                            matrixC = minor(1, comboBox2.SelectedIndex+1, comboBox3.SelectedIndex+1);
-                            matrixSetter(2);
+                            for (int j = 0; j < colB.Value; j++)
+                            {
+                                minorMatrixB[i, j] = minor(0, i, j);
+                            }
                         }
-                        else { MessageBox.Show("Lütfen minör hesabý için satýr ve sütun seçimini matrise uygun olarak yapýnýz."); }
+                        matrixC = minorMatrixB;
+                        matrixSetter(2);
                     }
-                    else { MessageBox.Show("Lütfen matrisi kontrol ediniz."); }
+                    else { MessageBox.Show("Matriste hata var, lütfen kontrol edip tekrar deneyin. \n\t-Matris tam dolu ve tam sayýlar içermelidir.\n\t-Matris kare matris olmalý."); }
                     break;
                 case -1:
                     MessageBox.Show("Lütfen bir iþlem seçiniz.");
@@ -462,6 +476,11 @@ namespace MatrisHesap
                 default:
                     MessageBox.Show("Bu iþlem geliþtirme aþamasýndadýr.");
                     break;
+            }
+
+            if (rowC == colC)
+            {
+                detC.Text = determinant(matrixC, rowC, colC).ToString();
             }
         }
 
@@ -578,10 +597,10 @@ namespace MatrisHesap
             
         }
 
-        public int[,] minor(int matName, int row, int col)
+        public int minor(int matName, int row, int col)
         {
             int[,] minorMatrix = new int[2,2];
-            //int minor;
+            int minor=0;
             
             if(matName == 0 && isThereNumber(0) == true)
             {
@@ -590,14 +609,16 @@ namespace MatrisHesap
 
                 for (int i = 0; i < rowA.Value - 1; i++)
                 {
-                    if (i < row - 1) { k = i; } else { k = i + 1; }
+                    if (i < row) { k = i; } else { k = i + 1; }
                     for (int j = 0; j < colA.Value - 1; j++)
                     {
-                        if (j < col - 1) { l = j; } else { l = j + 1; }
+                        if (j < col) { l = j; } else { l = j + 1; }
                         minorMatrix[i, j] = matrixA[k, l];
                     }
                 }
+                minor = determinant(minorMatrix, rowA.Value - 1, colA.Value - 1);
             }
+            
 
             if (matName == 1 && isThereNumber(1) == true)
             {
@@ -606,23 +627,30 @@ namespace MatrisHesap
 
                 for (int i = 0; i < rowB.Value - 1; i++)
                 {
-
+                    if (i < row - 1) { k = i; } else { k = i + 1; }
                     for (int j = 0; j < colB.Value - 1; j++)
                     {
-                        if (i < row - 1) { k = i; } else {k = i + 1; }
-                        if (j < col - 1) { l = j; } else {l = j + 1;}
+                        if (j < col - 1) { l = j; } else { l = j + 1; }
                         minorMatrix[i, j] = matrixB[k, l];
                     }
                 }
+                minor = determinant(minorMatrix, rowB.Value - 1, colB.Value - 1);
             }
-            return minorMatrix;
+            
+            return minor;
         }
-        public int determinant(int matName)
+        public int determinant(int[,] matName, int detOrow, int detOcol)
         {
-            int[,] detMatrix = new int[2,2];
+            int detValue = 0, detRow = 0, detCol = 0, sarrusRow, sarrusCol;
+            detRow = detOrow;
+            detCol = detOcol;
+            int[,] detMatrix = new int[detRow, detCol];
             int[,] sarrusMatrix;
-            int detValue=0, detRow=0, detCol=0, sarrusRow, sarrusCol;
-            if (matName == 0) 
+            
+
+            
+            
+            if (matName == matrixA) 
             {
                 detRow = rowA.Value;
                 detCol = colA.Value;
@@ -630,7 +658,7 @@ namespace MatrisHesap
                 detMatrix = matrixA;
             }
 
-            if (matName == 1)
+            if (matName == matrixB)
             {
                 detRow = rowB.Value;
                 detCol = colB.Value;
@@ -638,7 +666,7 @@ namespace MatrisHesap
                 detMatrix = matrixB;
             }
 
-            if (matName == 2)
+            if (matName == matrixC)
             {
                 detRow = rowC;
                 detCol = colC;
@@ -646,9 +674,17 @@ namespace MatrisHesap
                 detMatrix = matrixC;
             }
 
-            if (detRow == 1 && detCol == 1) { detValue = detMatrix[0, 0]; }
+            else
+            {
+                detRow = detOrow;
+                detCol = detOcol;
+                detMatrix = new int[detOrow, detOcol];
+                detMatrix = matName;
+            }
 
-            else if (detRow == 2 && detCol == 2) { detValue = detMatrix[0, 0] * detMatrix[1, 1] - detMatrix[0, 1] * detMatrix[1, 0]; }
+            if (detRow == 1 && detCol == 1) { detValue = detMatrix[0, 0]; return detValue; }
+
+            else if (detRow == 2 && detCol == 2) { detValue = detMatrix[0, 0] * detMatrix[1, 1] - detMatrix[0, 1] * detMatrix[1, 0]; return detValue; }
             
             else if (detRow == 3 && detCol == 3)
             {
@@ -671,11 +707,19 @@ namespace MatrisHesap
                            -(sarrusMatrix[0, 0] * sarrusMatrix[1, 1] * sarrusMatrix[2, 2]
                            + sarrusMatrix[1, 0] * sarrusMatrix[2, 1] * sarrusMatrix[3, 2]
                            + sarrusMatrix[2, 0] * sarrusMatrix[3, 1] * sarrusMatrix[4, 2]);
+                return detValue;
+            }
+            else if (detRow == 4 && detCol == 4) 
+            { 
+                MessageBox.Show("Bu matris için determinant hesabý geliþtirme aþamasýndadýr.");
+                return 0;
             }
 
-            else { MessageBox.Show("Kare olmayan ve 3x3'ten büyük matrisler için determinant hesabý geliþtirme aþamasýndadýr."); }
-
-            return detValue;
+            else 
+            { 
+                MessageBox.Show("Kare olmayan matrisler için determinant hesabý yapýlamaz.");
+                return 0;
+            }
         }
 
         private void colB_Scroll(object sender, EventArgs e)
