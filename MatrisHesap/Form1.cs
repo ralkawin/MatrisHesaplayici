@@ -408,6 +408,24 @@ namespace MatrisHesap
                     }
                     else { MessageBox.Show("Çýkartma iþlemi yapabilmeniz için matrisler dolu ve eþit boyutta olmalýdýr."); }
                     break;
+                case 4:
+                    matrixSetter(0);
+                    rowC = colA.Value;
+                    colC = rowA.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixC = transpose(matrixA, rowA.Value, colA.Value);
+                    matrixSizer(2);
+                    matrixSetter(2);
+                    break;
+                case 5:
+                    matrixSetter(1);
+                    rowC = colB.Value;
+                    colC = rowB.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixC = transpose(matrixB, rowB.Value, colB.Value);
+                    matrixSizer(2);
+                    matrixSetter(2);
+                    break;
                 case 8:
                     if (isThereNumber(0) == true && rowA.Value == colA.Value) 
                     {
@@ -451,23 +469,24 @@ namespace MatrisHesap
                     }
                     else { MessageBox.Show("Matriste hata var, lütfen kontrol edip tekrar deneyin. \n\t-Matris tam dolu ve tam sayýlar içermelidir.\n\t-Matris kare matris olmalý."); }
                     break;
-                case 4:
+                case 10:
                     matrixSetter(0);
-                    rowC = colA.Value;
-                    colC = rowA.Value;
+                    rowC = rowA.Value;
+                    colC = colA.Value;
                     matrixC = new int[rowC, colC];
-                    matrixC = transpose(matrixA, rowA.Value, colA.Value);
+                    matrixC = cofactor(0, rowA.Value, colA.Value);
                     matrixSizer(2);
                     matrixSetter(2);
                     break;
-                case 5:
-                    MatrixSetter(1);
-                    rowC = colB.Value;
-                    colC = rowB.Value;
+                case 11:
+                    matrixSetter(1);
+                    rowC = rowB.Value;
+                    colC = colB.Value;
                     matrixC = new int[rowC, colC];
-                    matrixC = transpose(matrixB, rowB.Value, colB.Value);
+                    matrixC = cofactor(0, rowB.Value, colB.Value);
                     matrixSizer(2);
                     matrixSetter(2);
+                    break;
                 case -1:
                     MessageBox.Show("Lütfen bir iþlem seçiniz.");
                     break;
@@ -733,6 +752,22 @@ namespace MatrisHesap
             }
 
             return transMatrix;
+        }
+
+        public int[,] cofactor(int matName, int row, int col)
+        {
+            int[,] coMatrix = new int[row, col];
+
+            for (int i = 0; i < row; i++)
+            {
+                for (int j = 0; j < col; j++)
+                {
+                    coMatrix[i, j] = (int)(minor(matName, i, j) * Math.Pow(-1, i+j));
+                    
+                }
+            }
+
+            return coMatrix;
         }
 
         private void colB_Scroll(object sender, EventArgs e)
