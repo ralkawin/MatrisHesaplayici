@@ -9,6 +9,7 @@ namespace MatrisHesap
         int[,] matrixA = new int[4,4];
         int[,] matrixB = new int[4,4];
         int[,] matrixC = new int[4,4];
+        double[,] matrixInv = new double[4, 4];
         int rowC=4, colC=4;
         public Form1()
         {
@@ -472,6 +473,63 @@ namespace MatrisHesap
                     matrixSizer(2);
                     matrixSetter(2);
                     break;
+                case 6:
+                    matrixSetter(0);
+                    rowC = rowA.Value;
+                    colC = colA.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixSizer(2);
+                    if(inverse(matrixA))
+                    {
+                        inverse(matrixA);
+                        if(C11.Visible == true) { C11.Text = matrixInv[0, 0].ToString(); }
+                        if(C12.Visible == true) { C12.Text = matrixInv[0, 1].ToString(); }
+                        if(C13.Visible == true) { C13.Text = matrixInv[0, 2].ToString(); }
+                        if(C14.Visible == true) { C14.Text = matrixInv[0, 3].ToString(); }
+                        if(C21.Visible == true) { C21.Text = matrixInv[1, 0].ToString(); }
+                        if(C22.Visible == true) { C22.Text = matrixInv[1, 1].ToString(); }
+                        if(C23.Visible == true) { C23.Text = matrixInv[1, 2].ToString(); }
+                        if(C24.Visible == true) { C24.Text = matrixInv[1, 3].ToString(); }
+                        if(C31.Visible == true) { C31.Text = matrixInv[2, 0].ToString(); }
+                        if(C32.Visible == true) { C32.Text = matrixInv[2, 1].ToString(); }
+                        if(C33.Visible == true) { C33.Text = matrixInv[2, 2].ToString(); }
+                        if(C34.Visible == true) { C34.Text = matrixInv[2, 3].ToString(); }
+                        if(C41.Visible == true) { C41.Text = matrixInv[3, 0].ToString(); }
+                        if(C42.Visible == true) { C42.Text = matrixInv[3, 1].ToString(); }
+                        if(C43.Visible == true) { C43.Text = matrixInv[3, 2].ToString(); }
+                        if(C44.Visible == true) { C44.Text = matrixInv[3, 3].ToString(); }
+                    }
+                    else { inverse(matrixA); }
+                    
+                    break;
+                case 7:
+                    matrixSetter(1);
+                    rowC = rowB.Value;
+                    colC = colB.Value;
+                    matrixC = new int[rowC, colC];
+                    matrixSizer(2);
+                    if (inverse(matrixB))
+                    {
+                        inverse(matrixB);
+                        if (C11.Visible == true) { C11.Text = matrixInv[0, 0].ToString(); }
+                        if (C12.Visible == true) { C12.Text = matrixInv[0, 1].ToString(); }
+                        if (C13.Visible == true) { C13.Text = matrixInv[0, 2].ToString(); }
+                        if (C14.Visible == true) { C14.Text = matrixInv[0, 3].ToString(); }
+                        if (C21.Visible == true) { C21.Text = matrixInv[1, 0].ToString(); }
+                        if (C22.Visible == true) { C22.Text = matrixInv[1, 1].ToString(); }
+                        if (C23.Visible == true) { C23.Text = matrixInv[1, 2].ToString(); }
+                        if (C24.Visible == true) { C24.Text = matrixInv[1, 3].ToString(); }
+                        if (C31.Visible == true) { C31.Text = matrixInv[2, 0].ToString(); }
+                        if (C32.Visible == true) { C32.Text = matrixInv[2, 1].ToString(); }
+                        if (C33.Visible == true) { C33.Text = matrixInv[2, 2].ToString(); }
+                        if (C34.Visible == true) { C34.Text = matrixInv[2, 3].ToString(); }
+                        if (C41.Visible == true) { C41.Text = matrixInv[3, 0].ToString(); }
+                        if (C42.Visible == true) { C42.Text = matrixInv[3, 1].ToString(); }
+                        if (C43.Visible == true) { C43.Text = matrixInv[3, 2].ToString(); }
+                        if (C44.Visible == true) { C44.Text = matrixInv[3, 3].ToString(); }
+                    }
+                    else { inverse(matrixB); }
+                    break;
                 case 8:
                     if (isThereNumber(0) == true && rowA.Value == colA.Value) 
                     {
@@ -560,9 +618,7 @@ namespace MatrisHesap
                     MessageBox.Show("Bu iþlem geliþtirme aþamasýndadýr.");
                     break;
             }
-            matrixSizer(2);
-            matrixSetter(2);
-            matrixSetter(3);
+            
             detC.Text = determinant(matrixC, rowC, colC).ToString();
         }
 
@@ -721,7 +777,7 @@ namespace MatrisHesap
 
             else if (matName == 2 && isThereNumber(2) == true)
             {
-                matrixSetter(2);
+                //matrixSetter(2);
                 minorMatrix = new int[rowC - 1, colC - 1];
                 int k = 0, l = 0;
 
@@ -771,7 +827,7 @@ namespace MatrisHesap
                 if (matName == matrixC)
                 {
                     matrixSizer(2);
-                    matrixSetter(2);
+                    //matrixSetter(2);
                     detRow = rowC;
                     detCol = colC;
                     detMatrix = new int[rowC, colC];
@@ -862,6 +918,62 @@ namespace MatrisHesap
             }
 
             return coMatrix;
+        }
+
+        public bool inverse(int[,] matName)
+        {
+            bool result = false;
+            if (matName == matrixA) 
+            {
+                if (determinant(matrixA, rowA.Value, colA.Value) != 0 || rowA.Value != colA.Value)
+                {
+                    int[,] coA = new int[rowA.Value, colA.Value];
+                    int[,] adjA = new int[rowA.Value, colA.Value];
+                    matrixInv = new double[rowA.Value, colA.Value];
+                    coA = cofactor(0, rowA.Value, colA.Value);
+                    adjA = transpose(coA, rowA.Value, colA.Value);
+
+                    for (int i = 0; i < rowA.Value; i++)
+                    {
+                        for (int j = 0; j < colA.Value; j++)
+                        {
+                            matrixInv[i, j] = adjA[i, j] / determinant(matrixA, rowA.Value, colA.Value);
+                        }
+                    }
+                    result = true;
+                }
+                else
+                { 
+                    MessageBox.Show("Bu matrisin tersi yoktur.");
+                    result = false;
+                }
+            }
+            if(matName == matrixB) 
+            {
+                if (determinant(matrixB, rowB.Value, colB.Value) != 0 || rowB.Value != colB.Value)
+                {
+                    int[,] coB = new int[rowB.Value, colB.Value];
+                    int[,] adjB = new int[rowB.Value, colB.Value];
+                    matrixInv = new double[rowB.Value, colB.Value];
+                    coB = cofactor(0, rowB.Value, colB.Value);
+                    adjB = transpose(coB, rowB.Value, colB.Value);
+
+                    for (int i = 0; i < rowB.Value; i++)
+                    {
+                        for (int j = 0; j < colB.Value; j++)
+                        {
+                            matrixInv[i, j] = adjB[i, j] / determinant(matrixB, rowB.Value, colB.Value);
+                        }
+                    }
+                    result = true;
+                }
+                else
+                { 
+                    MessageBox.Show("Bu matrisin tersi yoktur.");
+                    result = false;
+                }
+            }
+            return result;
         }
 
         private void colB_Scroll(object sender, EventArgs e)
