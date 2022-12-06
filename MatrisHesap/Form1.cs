@@ -957,17 +957,22 @@ namespace MatrisHesap
                             }
                             else if (invAdj == 0)
                             {
-                                inverseM[i, j] = 0.ToString();
+                                inverseM[i, j] = "0";
+                            }
+                            else if (invAdj == inverseDet)
+                            {
+                                inverseM[i, j] = "1";
                             }
                             else
                             {
-                                if (invAdj < 0)
+                                
+                                if (inverseDet > 0)
                                 {
                                     inverseM[i, j] = invAdj.ToString() + "/" + inverseDet.ToString();
                                 }
                                 if (inverseDet < 0)
                                 {
-                                    inverseM[i, j] = (invAdj * (-1)).ToString() + "/" + (inverseDet*(-1)).ToString();
+                                    inverseM[i, j] = (invAdj * (-1)).ToString() + "/" + (inverseDet * (-1)).ToString();
                                 }
                             }
                         }
@@ -1016,11 +1021,16 @@ namespace MatrisHesap
                             }
                             else if (invAdj == 0)
                             {
-                                inverseM[i, j] = 0.ToString();
+                                inverseM[i, j] = "0";
+                            }
+                            else if (invAdj == inverseDet)
+                            {
+                                inverseM[i, j] = "1";
                             }
                             else
                             {
-                                if (invAdj < 0)
+                                
+                                if (inverseDet > 0)
                                 {
                                     inverseM[i, j] = invAdj.ToString() + "/" + inverseDet.ToString();
                                 }

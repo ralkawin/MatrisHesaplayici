@@ -142,7 +142,6 @@
             this.A11.Name = "A11";
             this.A11.Size = new System.Drawing.Size(34, 27);
             this.A11.TabIndex = 2;
-            this.A11.Text = "1";
             this.A11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A12
@@ -156,7 +155,6 @@
             this.A12.Name = "A12";
             this.A12.Size = new System.Drawing.Size(34, 27);
             this.A12.TabIndex = 3;
-            this.A12.Text = "2";
             this.A12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A13
@@ -170,7 +168,6 @@
             this.A13.Name = "A13";
             this.A13.Size = new System.Drawing.Size(34, 27);
             this.A13.TabIndex = 4;
-            this.A13.Text = "3";
             this.A13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A14
@@ -184,7 +181,6 @@
             this.A14.Name = "A14";
             this.A14.Size = new System.Drawing.Size(34, 27);
             this.A14.TabIndex = 5;
-            this.A14.Text = "4";
             this.A14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A24
@@ -198,7 +194,6 @@
             this.A24.Name = "A24";
             this.A24.Size = new System.Drawing.Size(34, 27);
             this.A24.TabIndex = 9;
-            this.A24.Text = "8";
             this.A24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A23
@@ -212,7 +207,6 @@
             this.A23.Name = "A23";
             this.A23.Size = new System.Drawing.Size(34, 27);
             this.A23.TabIndex = 8;
-            this.A23.Text = "7";
             this.A23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A22
@@ -226,7 +220,6 @@
             this.A22.Name = "A22";
             this.A22.Size = new System.Drawing.Size(34, 27);
             this.A22.TabIndex = 7;
-            this.A22.Text = "6";
             this.A22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A21
@@ -240,7 +233,6 @@
             this.A21.Name = "A21";
             this.A21.Size = new System.Drawing.Size(34, 27);
             this.A21.TabIndex = 6;
-            this.A21.Text = "5";
             this.A21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A34
@@ -254,7 +246,6 @@
             this.A34.Name = "A34";
             this.A34.Size = new System.Drawing.Size(34, 27);
             this.A34.TabIndex = 13;
-            this.A34.Text = "12";
             this.A34.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A33
@@ -268,7 +259,6 @@
             this.A33.Name = "A33";
             this.A33.Size = new System.Drawing.Size(34, 27);
             this.A33.TabIndex = 12;
-            this.A33.Text = "11";
             this.A33.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A32
@@ -282,7 +272,6 @@
             this.A32.Name = "A32";
             this.A32.Size = new System.Drawing.Size(34, 27);
             this.A32.TabIndex = 11;
-            this.A32.Text = "10";
             this.A32.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A31
@@ -296,7 +285,6 @@
             this.A31.Name = "A31";
             this.A31.Size = new System.Drawing.Size(34, 27);
             this.A31.TabIndex = 10;
-            this.A31.Text = "9";
             this.A31.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A44
@@ -310,7 +298,6 @@
             this.A44.Name = "A44";
             this.A44.Size = new System.Drawing.Size(34, 27);
             this.A44.TabIndex = 17;
-            this.A44.Text = "16";
             this.A44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A43
@@ -324,7 +311,6 @@
             this.A43.Name = "A43";
             this.A43.Size = new System.Drawing.Size(34, 27);
             this.A43.TabIndex = 16;
-            this.A43.Text = "15";
             this.A43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A42
@@ -338,7 +324,6 @@
             this.A42.Name = "A42";
             this.A42.Size = new System.Drawing.Size(34, 27);
             this.A42.TabIndex = 15;
-            this.A42.Text = "14";
             this.A42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // A41
@@ -352,7 +337,6 @@
             this.A41.Name = "A41";
             this.A41.Size = new System.Drawing.Size(34, 27);
             this.A41.TabIndex = 14;
-            this.A41.Text = "13";
             this.A41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // setA
