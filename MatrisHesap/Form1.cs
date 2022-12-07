@@ -951,21 +951,27 @@ namespace MatrisHesap
                                     inverseDet = inverseDet / k;
                                 }
                             }
-                            if (invAdj < 0 && inverseDet < 0)
+                            if (Math.Abs(inverseDet) == 1)
                             {
-                                inverseM[i, j] = (invAdj*(-1)).ToString() + "/" + (inverseDet*(-1)).ToString();
+                                if ((invAdj > 0 && inverseDet > 0) || (invAdj < 0 && inverseDet > 0))
+                                {
+                                    inverseM[i, j] = invAdj.ToString();
+                                }
+                                else
+                                {
+                                    inverseM[i, j] = (invAdj * (-1)).ToString();
+                                }
+                            }
+                            else if (invAdj < 0 && inverseDet < 0)
+                            {
+                                inverseM[i, j] = (invAdj * (-1)).ToString() + "/" + (inverseDet * (-1)).ToString();
                             }
                             else if (invAdj == 0)
                             {
                                 inverseM[i, j] = "0";
                             }
-                            else if (invAdj == inverseDet)
-                            {
-                                inverseM[i, j] = "1";
-                            }
                             else
                             {
-                                
                                 if (inverseDet > 0)
                                 {
                                     inverseM[i, j] = invAdj.ToString() + "/" + inverseDet.ToString();
@@ -1015,21 +1021,27 @@ namespace MatrisHesap
                                     inverseDet = inverseDet / k;
                                 }
                             }
-                            if (invAdj < 0 && inverseDet < 0)
+                            if (Math.Abs(inverseDet) == 1)
                             {
-                                inverseM[i, j] = (invAdj * (-1)).ToString() + "/" + (inverseDet * (-1)).ToString();
+                                if ((invAdj > 0 && inverseDet > 0) || (invAdj < 0 && inverseDet > 0))
+                                {
+                                    inverseM[i, j] = invAdj.ToString();
+                                }
+                                else
+                                {
+                                    inverseM[i, j] = (invAdj * (-1)).ToString();
+                                }
+                            }
+                            else if (invAdj < 0 && inverseDet < 0)
+                            {
+                                inverseM[i, j] = (invAdj * (-1)).ToString() + "/" + (inverseDet * (-1)).ToString();  
                             }
                             else if (invAdj == 0)
                             {
                                 inverseM[i, j] = "0";
                             }
-                            else if (invAdj == inverseDet)
-                            {
-                                inverseM[i, j] = "1";
-                            }
                             else
                             {
-                                
                                 if (inverseDet > 0)
                                 {
                                     inverseM[i, j] = invAdj.ToString() + "/" + inverseDet.ToString();
